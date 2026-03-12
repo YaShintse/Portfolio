@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet R — Maxime SHU</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Orbitron:wght@700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <link rel="stylesheet" href="webfinance-project.css">
+</head>
+<body>
+
+<!-- ── HEADER ── -->
+<header>
+    <div class="header-content">
+        <a href="../index.html" class="back-btn">
+            ← <span data-en="BACK" data-fr="RETOUR">BACK</span>
+        </a>
+        <a href="../index.html" class="logo">Maxime <span class="logo-name">SHU</span></a>
+        <button id="langToggle" class="lang-btn">FR</button>
+    </div>
+</header>
+
+<!-- ── HERO ── -->
+<div class="hero fade-up">
+    <div class="project-tag" data-en="WEB AGENCY MANAGEMENT PROJECT" data-fr="PROJET PILOTAGE AGENCE WEB">WEB AGENCY MANAGEMENT PROJECT</div>
+    <h1 class="hero-title">
+        <span class="title-white">PROJET</span> <span class="title-accent">R</span><br>
+        <span class="title-sub" data-en="FINANCIAL DASHBOARD" data-fr="TABLEAU DE BORD FINANCIER">FINANCIAL DASHBOARD</span>
+    </h1>
+    <div class="hero-meta">
+        <span class="meta-pill tech">HTML · CSS · JavaScript</span>
+        <span class="meta-pill year">2025</span>
+        <span class="meta-pill type" data-en="Finance &amp; Management" data-fr="Finance &amp; Gestion">Finance &amp; Management</span>
+        <span class="meta-pill type2" data-en="Team Tool" data-fr="Outil Équipe">Team Tool</span>
+    </div>
+</div>
+
+<!-- ── VIDEO ── -->
+<div class="video-section fade-up delay-1">
+    <div class="section-label" data-en="▸ DEMO VIDEO" data-fr="▸ VIDÉO DE DÉMONSTRATION">▸ DEMO VIDEO</div>
+    <div class="video-wrapper">
+        <video controls muted loop>
+            <source src="webfinance.mp4" type="video/mp4">
+        </video>
+        <div class="video-placeholder">
+            <div class="play-icon">
+                <svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
+            </div>
+            <p data-en="Click to play demo" data-fr="Cliquer pour lancer la démo">Click to play demo</p>
+        </div>
+    </div>
+</div>
+
+<!-- ── DESCRIPTION + TECH ── -->
+<div class="info-section fade-up delay-2">
+
+    <div class="desc-block">
+        <h3 data-en="About this project" data-fr="À propos du projet">About this project</h3>
+        <p data-en="Projet R is a complete financial management dashboard built for a web agency of 4 partners. It centralizes all financial data — income, expenses, client tracking and analytics — in a clean, real-time interface with no backend required."
+           data-fr="Projet R est un tableau de bord financier complet conçu pour une agence web de 4 associés. Il centralise toutes les données financières — revenus, dépenses, suivi clients et analytiques — dans une interface épurée en temps réel, sans backend nécessaire.">
+            Projet R is a complete financial management dashboard built for a web agency of 4 partners. It centralizes all financial data — income, expenses, client tracking and analytics — in a clean, real-time interface with no backend required.
+        </p>
+        <p data-en="Each team member's contribution is tracked individually. The client directory automatically builds from income entries, with a full payment lifecycle: 30% deposit, 70% balance at delivery, or single 100% payment — all visualized with progress bars and status indicators."
+           data-fr="La contribution de chaque membre est suivie individuellement. L'annuaire clients se construit automatiquement à partir des revenus, avec un cycle de paiement complet : acompte 30%, solde 70% à la livraison, ou paiement unique 100%.">
+            Each team member's contribution is tracked individually. The client directory automatically builds from income entries, with a full payment lifecycle: 30% deposit, 70% balance at delivery, or single 100% payment — all visualized with progress bars and status indicators.
+        </p>
+        <ul class="feature-list">
+            <li data-en="Real-time KPI dashboard — net revenue, income, expenses, receivables" data-fr="Tableau de bord KPI en temps réel — CA net, revenus, dépenses, créances">Real-time KPI dashboard — net revenue, income, expenses, receivables</li>
+            <li data-en="Per-member contribution tracking with percentage breakdown" data-fr="Suivi de contribution par membre avec répartition en pourcentage">Per-member contribution tracking with percentage breakdown</li>
+            <li data-en="Client directory auto-built from transactions with full payment history" data-fr="Annuaire clients généré automatiquement avec historique complet des paiements">Client directory auto-built from transactions with full payment history</li>
+            <li data-en="30% deposit / 70% balance workflow with one-click delivery validation" data-fr="Workflow acompte 30% / solde 70% avec validation de livraison en un clic">30% deposit / 70% balance workflow with one-click delivery validation</li>
+            <li data-en="6 interactive Chart.js charts — pie, bar and monthly trend line" data-fr="6 graphiques Chart.js interactifs — camembert, barres et tendances mensuelles">6 interactive Chart.js charts — pie, bar and monthly trend line</li>
+            <li data-en="Password-protected edit &amp; delete, CSV export, FR/EN toggle" data-fr="Modification protégée, export CSV, bascule FR/EN, mode sombre/clair">Password-protected edit &amp; delete, CSV export, FR/EN toggle</li>
+        </ul>
+    </div>
+
+    <!-- 3D INTERACTIVE CARD -->
+    <div class="tech-block">
+        <h3 data-en="Tech Stack" data-fr="Technologies">Tech Stack</h3>
+
+        <!-- 3D scene -->
+        <div class="scene-3d" id="scene3d">
+            <div class="cube" id="cube">
+                <div class="face front">
+                    <i class="devicon-javascript-plain colored"></i>
+                    <span>JavaScript</span>
+                </div>
+                <div class="face back">
+                    <i class="devicon-css3-plain colored"></i>
+                    <span>CSS3</span>
+                </div>
+                <div class="face right">
+                    <span class="face-emoji">📊</span>
+                    <span>Chart.js</span>
+                </div>
+                <div class="face left">
+                    <i class="devicon-html5-plain colored"></i>
+                    <span>HTML5</span>
+                </div>
+                <div class="face top">
+                    <span class="face-emoji">💾</span>
+                    <span>Storage</span>
+                </div>
+                <div class="face bottom">
+                    <span class="face-emoji">📥</span>
+                    <span>CSV</span>
+                </div>
+            </div>
+        </div>
+        <p class="scene-hint" data-en="← drag to rotate →" data-fr="← glisser pour tourner →">← drag to rotate →</p>
+
+        <div class="tech-chips-row">
+            <div class="tech-chip"><i class="devicon-html5-plain colored"></i><span class="chip-label">HTML5</span></div>
+            <div class="tech-chip"><i class="devicon-css3-plain colored"></i><span class="chip-label">CSS3</span></div>
+            <div class="tech-chip"><i class="devicon-javascript-plain colored"></i><span class="chip-label">JS</span></div>
+            <div class="tech-chip chip-custom"><span class="chip-icon-txt">📊</span><span class="chip-label">Chart.js</span></div>
+            <div class="tech-chip chip-custom"><span class="chip-icon-txt">💾</span><span class="chip-label">localStorage</span></div>
+            <div class="tech-chip chip-custom"><span class="chip-icon-txt">📥</span><span class="chip-label">CSV Export</span></div>
+        </div>
+    </div>
+
+</div>
+
+<!-- ── HOW IT WORKS ── -->
+<div class="flow-section fade-up delay-3">
+    <div class="section-label" data-en="▸ HOW IT WORKS" data-fr="▸ FONCTIONNEMENT">▸ HOW IT WORKS</div>
+    <div class="flow-grid">
+        <div class="flow-step">
+            <div class="step-num">01</div>
+            <div class="step-icon">💳</div>
+            <div class="step-title" data-en="Add a transaction" data-fr="Ajouter une transaction">Add a transaction</div>
+            <div class="step-desc" data-en="Log income or expenses with member, client, category and payment stage." data-fr="Enregistrez un revenu ou une dépense avec membre, client, catégorie et étape de paiement.">Log income or expenses with member, client, category and payment stage.</div>
+        </div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step">
+            <div class="step-num">02</div>
+            <div class="step-icon">📊</div>
+            <div class="step-title" data-en="Dashboard updates" data-fr="Tableau de bord mis à jour">Dashboard updates</div>
+            <div class="step-desc" data-en="KPIs, charts and member contributions refresh instantly in real time." data-fr="Les KPIs, graphiques et contributions membres se rafraîchissent instantanément.">KPIs, charts and member contributions refresh instantly in real time.</div>
+        </div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step">
+            <div class="step-num">03</div>
+            <div class="step-icon">🏢</div>
+            <div class="step-title" data-en="Track your clients" data-fr="Suivi des clients">Track your clients</div>
+            <div class="step-desc" data-en="Clients appear automatically. Monitor deposit, balance and delivery status." data-fr="Les clients apparaissent automatiquement. Suivez l'acompte, le solde et la livraison.">Clients appear automatically. Monitor deposit, balance and delivery status.</div>
+        </div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step">
+            <div class="step-num">04</div>
+            <div class="step-icon">🎉</div>
+            <div class="step-title" data-en="Validate delivery" data-fr="Valider la livraison">Validate delivery</div>
+            <div class="step-desc" data-en="One click collects the remaining 70% balance and closes the client file." data-fr="Un clic encaisse le solde 70% restant et clôture le dossier client.">One click collects the remaining 70% balance and closes the client file.</div>
+        </div>
+    </div>
+</div>
+
+<!-- ── SCREENSHOTS ── -->
+<div class="gallery-section fade-up delay-4">
+    <div class="gallery-header">
+        <h2 data-en="Screenshots" data-fr="Captures d'écran">Screenshots</h2>
+    </div>
+    <div class="gallery-grid">
+
+        <div class="gallery-item" onclick="openLightbox(this)">
+            <img src="webfinance1.png" alt="Dashboard — KPI Overview" class="gallery-img">
+            <div class="gallery-overlay"><span data-en="Dashboard" data-fr="Tableau de bord">Dashboard</span></div>
+        </div>
+
+        <div class="gallery-item" onclick="openLightbox(this)">
+            <img src="webfinance2.png" alt="Transaction History" class="gallery-img">
+            <div class="gallery-overlay"><span data-en="Transactions" data-fr="Transactions">Transactions</span></div>
+        </div>
+
+        <div class="gallery-item" onclick="openLightbox(this)">
+            <img src="webfinance3.png" alt="Client Directory" class="gallery-img">
+            <div class="gallery-overlay"><span data-en="Client Directory" data-fr="Annuaire clients">Client Directory</span></div>
+        </div>
+
+        <div class="gallery-item" onclick="openLightbox(this)">
+            <img src="webfinance4.png" alt="New Transaction/Expense" class="gallery-img">
+            <div class="gallery-overlay"><span data-en="New Transaction/Expense" data-fr="Nouvelle transaction/dépense">New Transaction/Expense</span></div>
+        </div>
+
+        <div class="gallery-item" onclick="openLightbox(this)">
+            <img src="webfinance5.png" alt="Analytics &amp; Charts" class="gallery-img">
+            <div class="gallery-overlay"><span data-en="Analytics" data-fr="Analytique">Analytics</span></div>
+        </div>
+
+        <div class="gallery-item" onclick="openLightbox(this)">
+            <img src="webfinance6.png" alt="Analytics 2" class="gallery-img">
+            <div class="gallery-overlay"><span data-en="Analytics 2" data-fr="Analytique 2">Analytics 2</span></div>
+        </div>
+
+    </div>
+</div>
+
+<!-- ── LIGHTBOX ── -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <button class="lightbox-close" onclick="closeLightbox()">✕ CLOSE</button>
+    <img id="lightboxImg" src="" alt="">
+</div>
+
+<!-- ── FOOTER ── -->
+<footer>
+    <p data-en="© 2026 Maxime SHU. All rights reserved." data-fr="© 2026 Maxime SHU. Tous droits réservés.">© 2026 Maxime SHU. All rights reserved.</p>
+</footer>
+
+<script src="webfinance-project.js"></script>
+<script>
+// Override lightbox to work with real img tags
+function openLightbox(el) {
+    const img = el.querySelector('.gallery-img');
+    if (!img) return;
+    const lb = document.getElementById('lightbox');
+    const lbImg = document.getElementById('lightboxImg');
+    lbImg.src = img.src;
+    lbImg.alt = img.alt;
+    lb.classList.add('active');
+}
+function closeLightbox() {
+    document.getElementById('lightbox').classList.remove('active');
+}
+</script>
+<style>
+.gallery-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: inherit;
+    transition: transform 0.4s ease;
+}
+.gallery-item:hover .gallery-img { transform: scale(1.04); }
+.gallery-item { overflow: hidden; }
+</style>
+
+</body>
+</html>
