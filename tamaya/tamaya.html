@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tamaya — Maxime SHU</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Orbitron:wght@700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="tamaya.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+</head>
+<body>
+
+<!-- ── HEADER ── -->
+<header>
+    <div class="header-content">
+        <a href="../index.html" class="back-btn" style="text-decoration:none;cursor:pointer;">
+            ← <span data-en="BACK" data-fr="RETOUR">BACK</span>
+        </a>
+        <a href="../index.html" class="logo" style="text-decoration:none;cursor:pointer;pointer-events:auto;">Maxime <span>SHU</span></a>
+        <button id="langToggle" class="lang-btn">FR</button>
+    </div>
+</header>
+
+<!-- ── HERO ── -->
+<div class="hero fade-up">
+    <div class="project-tag" data-en="AI / DISCORD / VTUBE STUDIO PROJECT" data-fr="PROJET IA / DISCORD / VTUBE STUDIO">AI / DISCORD / VTUBE STUDIO PROJECT</div>
+    <h1 class="hero-title">
+        <span class="accent">TAMAYA</span><br>
+        <span class="title-sub title-sub--cyan" data-en="AUTONOMOUS AI VTUBER" data-fr="VTUBER IA AUTONOME">AUTONOMOUS AI VTUBER</span>
+    </h1>
+    <div class="hero-meta">
+        <span class="meta-pill tech">Python · Ollama · Discord.py</span>
+        <span class="meta-pill year">2025</span>
+        <span class="meta-pill type" data-en="Artificial Intelligence" data-fr="Intelligence Artificielle">Artificial Intelligence</span>
+        <span class="meta-pill type2" data-en="Discord Bot" data-fr="Bot Discord">Discord Bot</span>
+        <span class="meta-pill type3">VTUBE STUDIO</span>
+        <span class="meta-pill type4">EDGE TTS</span>
+        <span class="meta-pill type5">FASTER-WHISPER</span>
+        <span class="meta-pill type6">WEBSOCKET / PYVTS</span>
+    </div>
+</div>
+
+<!-- ── VIDEO ── -->
+<div class="video-section fade-up delay-1">
+    <div class="section-label" data-en="▸ DEMO VIDEO" data-fr="▸ VIDÉO DE DÉMONSTRATION">▸ DEMO VIDEO</div>
+    <div class="video-wrapper">
+        <video controls autoplay muted loop>
+            <source src="tamaya.mp4" type="video/mp4">
+        </video>
+        <div class="video-placeholder">
+            <div class="play-icon">
+                <svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
+            </div>
+            <p data-en="Click to play demo" data-fr="Cliquer pour lancer la démo">Click to play demo</p>
+        </div>
+    </div>
+</div>
+
+<!-- ── DESCRIPTION + TECH ── -->
+<div class="info-section fade-up delay-2">
+
+    <!-- Description -->
+    <div class="desc-block">
+        <h3 data-en="About this project" data-fr="À propos du projet">About this project</h3>
+        <p data-en="Tamaya is an autonomous AI VTuber that lives inside Discord. She listens to voice conversations, decides on her own whether to respond, generates unpredictable replies through a local LLM, speaks with a neural voice, and animates a VTube Studio avatar — all in real time."
+           data-fr="Tamaya est une VTuber IA autonome qui vit dans Discord. Elle écoute les conversations vocales, décide d'elle-même d'y répondre ou non, génère des réponses imprévisibles via un LLM local, parle avec une voix neuronale et anime un avatar VTube Studio — le tout en temps réel.">
+            Tamaya is an autonomous AI VTuber that lives inside Discord. She listens to voice conversations, decides on her own whether to respond, generates unpredictable replies through a local LLM, speaks with a neural voice, and animates a VTube Studio avatar — all in real time.
+        </p>
+        <p data-en="She has a real personality: bizarre, impulsive, sometimes mean, always strange. A free will system lets her spontaneously comment on conversations after a period of silence, making her feel genuinely alive in the server."
+           data-fr="Elle a une vraie personnalité : bizarre, impulsive, parfois méchante, toujours étrange. Un système de libre arbitre lui permet de commenter spontanément les conversations après un silence, la rendant réellement vivante sur le serveur.">
+            She has a real personality: bizarre, impulsive, sometimes mean, always strange. A free will system lets her spontaneously comment on conversations after a period of silence, making her feel genuinely alive in the server.
+        </p>
+        <ul class="feature-list">
+            <li data-en="Voice recognition via Faster-Whisper (STT)" data-fr="Reconnaissance vocale via Faster-Whisper (STT)">Voice recognition via Faster-Whisper (STT)</li>
+            <li data-en="Local LLM with Mistral — no internet required" data-fr="LLM local avec Mistral — aucune connexion requise">Local LLM with Mistral — no internet required</li>
+            <li data-en="Neural voice synthesis with Edge TTS (fr-FR-EloiseNeural)" data-fr="Synthèse vocale neuronale avec Edge TTS (fr-FR-EloiseNeural)">Neural voice synthesis with Edge TTS (fr-FR-EloiseNeural)</li>
+            <li data-en="VTube Studio avatar animated via WebSocket (pyvts)" data-fr="Avatar VTube Studio animé via WebSocket (pyvts)">VTube Studio avatar animated via WebSocket (pyvts)</li>
+            <li data-en="Free will — spontaneous comments after silence" data-fr="Libre arbitre — commentaires spontanés après un silence">Free will — spontaneous comments after silence</li>
+            <li data-en="Emotion mapping — hotkeys triggered by detected sentiment" data-fr="Mappage d'émotions — hotkeys déclenchées selon le sentiment détecté">Emotion mapping — hotkeys triggered by detected sentiment</li>
+            <li data-en="Full Discord integration — !join, !leave, !reset commands" data-fr="Intégration Discord complète — commandes !join, !leave, !reset">Full Discord integration — !join, !leave, !reset commands</li>
+        </ul>
+    </div>
+
+    <!-- Tech stack -->
+    <div class="tech-block">
+        <h3 data-en="Tech Stack" data-fr="Technologies">Tech Stack</h3>
+        <div class="tech-grid">
+            <div class="tech-chip"><i class="devicon-python-plain colored"></i><span class="chip-label">Python 3</span></div>
+            <div class="tech-chip chip-custom"><span class="chip-icon-txt">🧠</span><span class="chip-label">Ollama / Mistral</span></div>
+            <div class="tech-chip chip-custom"><span class="chip-icon-txt">🎮</span><span class="chip-label">Discord.py</span></div>
+            <div class="tech-chip chip-custom"><span class="chip-icon-txt">🗣️</span><span class="chip-label">Edge TTS</span></div>
+            <div class="tech-chip chip-custom"><span class="chip-icon-txt">👂</span><span class="chip-label">Faster-Whisper</span></div>
+            <div class="tech-chip chip-custom"><span class="chip-icon-txt">🎭</span><span class="chip-label">pyvts / VTube</span></div>
+        </div>
+
+        <!-- Stats -->
+        <div class="stats-block" style="margin-top:1.8rem; padding-top:1.5rem; border-top:1px solid rgba(139,0,255,0.12);">
+            <div class="stat-item">
+                <div class="stat-number">5</div>
+                <div class="stat-label" data-en="Modules" data-fr="Modules">Modules</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">FR</div>
+                <div class="stat-label" data-en="Language" data-fr="Langue">Language</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">100%</div>
+                <div class="stat-label" data-en="Local AI" data-fr="IA Locale">Local AI</div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- ── ARCHITECTURE ── -->
+<div class="archi-section fade-up">
+    <div class="section-label" data-en="▸ SYSTEM DESIGN" data-fr="▸ CONCEPTION SYSTÈME">▸ SYSTEM DESIGN</div>
+    <h2 class="archi-title" data-en="Architecture" data-fr="Architecture">Architecture</h2>
+
+    <!-- Flow bar -->
+    <div class="archi-flow">
+        <div class="archi-node archi-node--blue">
+            <span class="archi-icon">🎙️</span>
+            <span class="archi-name" data-en="DISCORD<br>VOICE" data-fr="DISCORD<br>VOIX">DISCORD<br>VOICE</span>
+        </div>
+        <div class="archi-arrow">→</div>
+        <div class="archi-node archi-node--blue">
+            <span class="archi-icon">👂</span>
+            <span class="archi-name">STT<br>WHISPER</span>
+        </div>
+        <div class="archi-arrow">→</div>
+        <div class="archi-node archi-node--violet">
+            <span class="archi-icon">🧠</span>
+            <span class="archi-name">AI BRAIN<br>MISTRAL</span>
+        </div>
+        <div class="archi-arrow">→</div>
+        <div class="archi-node archi-node--violet">
+            <span class="archi-icon">🗣️</span>
+            <span class="archi-name">TTS<br>EDGE</span>
+        </div>
+        <div class="archi-arrow">→</div>
+        <div class="archi-node archi-node--blue">
+            <span class="archi-icon">📢</span>
+            <span class="archi-name" data-en="DISCORD<br>AUDIO" data-fr="DISCORD<br>AUDIO">DISCORD<br>AUDIO</span>
+        </div>
+        <div class="archi-arrow">+</div>
+        <div class="archi-node archi-node--pink">
+            <span class="archi-icon">🎭</span>
+            <span class="archi-name">VTUBE<br>STUDIO</span>
+        </div>
+    </div>
+
+    <!-- Module cards -->
+    <div class="archi-modules">
+        <div class="archi-module">
+            <div class="archi-module-icon">🧠</div>
+            <div class="archi-module-name">AI BRAIN</div>
+            <div class="archi-module-file">ai_brain.py</div>
+            <div class="archi-module-desc" data-en="Drives Tamaya's entire personality. Interfaces with Ollama/Mistral locally. Manages conversation history, decides whether to respond, and can generate spontaneous comments unprompted — her "free will" system." data-fr="Pilote toute la personnalité de Tamaya. Interface avec Ollama/Mistral en local. Gère l'historique, décide de répondre ou non et génère des commentaires spontanés — son système de libre arbitre.">Drives Tamaya's entire personality. Interfaces with Ollama/Mistral locally. Manages conversation history, decides whether to respond, and can generate spontaneous comments unprompted — her "free will" system.</div>
+        </div>
+        <div class="archi-module">
+            <div class="archi-module-icon">🎭</div>
+            <div class="archi-module-name">VTUBE MANAGER</div>
+            <div class="archi-module-file">vtube_manager.py</div>
+            <div class="archi-module-desc" data-en="Connects to VTube Studio via WebSocket using pyvts. Maps emotions to hotkeys, triggers lip-sync animations in real time, and fires idle animations to keep the avatar alive between responses." data-fr="Se connecte à VTube Studio via WebSocket avec pyvts. Mappe les émotions sur des hotkeys, déclenche la synchronisation labiale en temps réel et lance des animations d'idle entre les réponses.">Connects to VTube Studio via WebSocket using pyvts. Maps emotions to hotkeys, triggers lip-sync animations in real time, and fires idle animations to keep the avatar alive between responses.</div>
+        </div>
+        <div class="archi-module">
+            <div class="archi-module-icon">🗣️</div>
+            <div class="archi-module-name">SPEAK WORKER</div>
+            <div class="archi-module-file">speak_worker.py</div>
+            <div class="archi-module-desc" data-en="Spawned as a subprocess. Generates speech audio via Edge TTS (fr-FR-EloiseNeural), writes it to a .wav file, and plays it either locally through VB-Audio Cable or directly into the Discord voice channel." data-fr="Lancé en sous-processus. Génère l'audio via Edge TTS (fr-FR-EloiseNeural), l'écrit dans un .wav et le joue en local via VB-Audio Cable ou directement dans le salon vocal Discord.">Spawned as a subprocess. Generates speech audio via Edge TTS (fr-FR-EloiseNeural), writes it to a .wav file, and plays it either locally through VB-Audio Cable or directly into the Discord voice channel.</div>
+        </div>
+        <div class="archi-module">
+            <div class="archi-module-icon">🤖</div>
+            <div class="archi-module-name">DISCORD BOT</div>
+            <div class="archi-module-file">main.py + discord_config.py</div>
+            <div class="archi-module-desc" data-en="Handles the full Discord integration. Listens in voice channels, routes messages to the AI brain, plays audio responses back with FFmpeg, and exposes slash commands like !join, !leave, !status, !reset." data-fr="Gère l'intégration Discord complète. Écoute les salons vocaux, route les messages vers le cerveau IA, joue les réponses audio avec FFmpeg et expose les commandes !join, !leave, !status, !reset.">Handles the full Discord integration. Listens in voice channels, routes messages to the AI brain, plays audio responses back with FFmpeg, and exposes slash commands like !join, !leave, !status, !reset.</div>
+        </div>
+        <div class="archi-module">
+            <div class="archi-module-icon">⚙️</div>
+            <div class="archi-module-name">CONFIG</div>
+            <div class="archi-module-file">config.py</div>
+            <div class="archi-module-desc" data-en="Single source of truth. Controls the LLM model, personality prompt, Whisper model size, TTS settings, VTube port, free-will timing, and all runtime behavior — no hardcoded values anywhere else." data-fr="Source unique de vérité. Contrôle le modèle LLM, le prompt de personnalité, la taille du modèle Whisper, les réglages TTS, le port VTube et tous les comportements — aucune valeur codée en dur ailleurs.">Single source of truth. Controls the LLM model, personality prompt, Whisper model size, TTS settings, VTube port, free-will timing, and all runtime behavior — no hardcoded values anywhere else.</div>
+        </div>
+    </div>
+</div>
+
+<!-- ── HOW IT WORKS ── -->
+<div class="flow-section fade-up delay-3">
+    <div class="section-label" data-en="▸ HOW IT WORKS" data-fr="▸ FONCTIONNEMENT">▸ HOW IT WORKS</div>
+    <div class="flow-grid">
+        <div class="flow-step">
+            <div class="step-num">01</div>
+            <div class="step-icon">🎙️</div>
+            <div class="step-title" data-en="Listens to Discord" data-fr="Écoute Discord">Listens to Discord</div>
+            <div class="step-desc" data-en="Captures voice from the Discord channel and transcribes it with Faster-Whisper." data-fr="Capte la voix du salon Discord et la transcrit avec Faster-Whisper.">Captures voice from the Discord channel and transcribes it with Faster-Whisper.</div>
+        </div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step">
+            <div class="step-num">02</div>
+            <div class="step-icon">🧠</div>
+            <div class="step-title" data-en="Thinks &amp; decides" data-fr="Réfléchit &amp; décide">Thinks &amp; decides</div>
+            <div class="step-desc" data-en="Mistral decides whether to respond and generates an unpredictable reply matching her personality." data-fr="Mistral décide de répondre ou non et génère une réplique imprévisible selon sa personnalité.">Mistral decides whether to respond and generates an unpredictable reply matching her personality.</div>
+        </div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step">
+            <div class="step-num">03</div>
+            <div class="step-icon">🗣️</div>
+            <div class="step-title" data-en="Speaks" data-fr="Parle">Speaks</div>
+            <div class="step-desc" data-en="Edge TTS generates a neural voice audio file, played directly in the Discord voice channel." data-fr="Edge TTS génère un fichier audio à voix neuronale, joué directement dans le salon vocal Discord.">Edge TTS generates a neural voice audio file, played directly in the Discord voice channel.</div>
+        </div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step">
+            <div class="step-num">04</div>
+            <div class="step-icon">🎭</div>
+            <div class="step-title" data-en="Animates the avatar" data-fr="Anime l'avatar">Animates the avatar</div>
+            <div class="step-desc" data-en="VTube Studio receives WebSocket signals and triggers lip-sync and emotion expressions in real time." data-fr="VTube Studio reçoit les signaux WebSocket et déclenche la synchronisation labiale et les expressions d'émotion en temps réel.">VTube Studio receives WebSocket signals and triggers lip-sync and emotion expressions in real time.</div>
+        </div>
+    </div>
+</div>
+
+<!-- ── SCREENSHOTS ── -->
+<div class="gallery-section fade-up delay-4">
+    <div class="gallery-header">
+        <h2 data-en="Screenshots" data-fr="Captures d'écran">Screenshots</h2>
+    </div>
+    <div class="gallery-grid">
+
+        <div class="gallery-item" onclick="openLightbox(this)">
+            <img src="tamaya1.png" alt="Tamaya in Discord">
+            <div class="gallery-overlay"><span data-en="Tamaya in Discord" data-fr="Tamaya dans Discord">Tamaya in Discord</span></div>
+        </div>
+
+        <div class="gallery-item" onclick="openLightbox(this)">
+            <img src="tamaya2.png" alt="VTube Studio avatar">
+            <div class="gallery-overlay"><span data-en="VTube Studio avatar" data-fr="Avatar VTube Studio">VTube Studio avatar</span></div>
+        </div>
+
+        <div class="gallery-item" onclick="openLightbox(this)">
+            <img src="tamaya3.png" alt="Terminal — AI responses">
+            <div class="gallery-overlay"><span data-en="Terminal — AI responses" data-fr="Terminal — réponses IA">Terminal — AI responses</span></div>
+        </div>
+
+        <div class="gallery-item" onclick="openLightbox(this)">
+            <img src="tamaya4.png" alt="Config & personality">
+            <div class="gallery-overlay"><span data-en="Config &amp; personality" data-fr="Config &amp; personnalité">Config &amp; personality</span></div>
+        </div>
+
+    </div>
+</div>
+
+<!-- ── LIGHTBOX ── -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <button class="lightbox-close" onclick="closeLightbox()">✕ CLOSE</button>
+    <img id="lightboxImg" src="" alt="">
+</div>
+
+<!-- ── FOOTER ── -->
+<footer>
+    <p data-en="© 2026 Maxime SHU. All rights reserved." data-fr="© 2026 Maxime SHU. Tous droits réservés.">© 2026 Maxime SHU. All rights reserved.</p>
+</footer>
+
+<script>
+// ─── LIGHTBOX ───
+function openLightbox(el) {
+    const img = el.querySelector('img');
+    if (!img) return;
+    document.getElementById('lightboxImg').src = img.src;
+    document.getElementById('lightbox').classList.add('active');
+}
+
+function closeLightbox() {
+    document.getElementById('lightbox').classList.remove('active');
+}
+
+document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') closeLightbox();
+});
+
+// ─── LANGUAGE TOGGLE ───
+let currentLang = 'en';
+const langToggle = document.getElementById('langToggle');
+
+langToggle.addEventListener('click', () => {
+    currentLang = currentLang === 'en' ? 'fr' : 'en';
+    langToggle.textContent = currentLang === 'en' ? 'FR' : 'EN';
+    document.documentElement.lang = currentLang;
+
+    document.querySelectorAll('[data-en][data-fr]').forEach(el => {
+        el.textContent = el.getAttribute(`data-${currentLang}`);
+    });
+
+    localStorage.setItem('preferredLang', currentLang);
+});
+
+window.addEventListener('DOMContentLoaded', () => {
+    const saved = localStorage.getItem('preferredLang');
+    if (saved && saved !== currentLang) langToggle.click();
+});
+
+// ─── SCROLL REVEAL ───
+(function() {
+    const els = document.querySelectorAll('.fade-up');
+    const io = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+            if (e.isIntersecting) {
+                e.target.classList.add('visible');
+            } else {
+                e.target.classList.remove('visible');
+            }
+        });
+    }, { threshold: 0.1 });
+    els.forEach(el => io.observe(el));
+})();
+</script>
+
+</body>
+</html>
