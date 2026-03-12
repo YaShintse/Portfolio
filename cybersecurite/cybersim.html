@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberSim — Maxime SHU</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Orbitron:wght@700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="cybersim.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+
+    <style>
+    /* Override fade-up pour qu'il soit contrôlé par JS */
+    .fade-up {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity 0.7s ease, transform 0.7s ease;
+        animation: none !important;
+    }
+    .fade-up.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    </style>
+</head>
+<body>
+
+<!-- ── HEADER ── -->
+<header>
+    <div class="header-content">
+        <a href="../index.html" class="back-btn" style="text-decoration:none;cursor:pointer;">
+            ← <span data-en="BACK" data-fr="RETOUR">BACK</span>
+        </a>
+        <a href="../index.html" class="logo" style="text-decoration:none;cursor:pointer;pointer-events:auto;">Maxime <span>SHU</span></a>
+        <button id="langToggle" class="lang-btn">FR</button>
+    </div>
+</header>
+
+<!-- ── HERO ── -->
+<div class="hero fade-up">
+    <div class="project-tag" data-en="WEB SECURITY AWARENESS PROJECT" data-fr="PROJET SENSIBILISATION CYBERSÉCURITÉ">WEB SECURITY AWARENESS PROJECT</div>
+    <h1 class="hero-title">
+        <span>CYBER</span><span class="title-accent">SIM</span><br>
+        <span class="title-sub" data-en="WEB DANGERS SIMULATOR" data-fr="SIMULATEUR DE DANGERS DU WEB">WEB DANGERS SIMULATOR</span>
+    </h1>
+    <div class="hero-meta">
+        <span class="meta-pill tech">HTML · CSS · JavaScript</span>
+        <span class="meta-pill year" data-en="2025" data-fr="2025">2025</span>
+        <span class="meta-pill type" data-en="Cybersecurity" data-fr="Cybersécurité">Cybersecurity</span>
+        <span class="meta-pill type2" data-en="Education" data-fr="Éducation">Education</span>
+    </div>
+</div>
+
+<!-- ── VIDEO ── -->
+<div class="video-section fade-up delay-1">
+    <div class="section-label" data-en="▸ DEMO VIDEO" data-fr="▸ VIDÉO DE DÉMONSTRATION">▸ DEMO VIDEO</div>
+    <div class="video-wrapper">
+                <video controls autoplay muted loop>
+                    <source src="cybersim.mp4" type="video/mp4">
+                </video>
+        <div class="video-placeholder" onclick="alert('Remplace ce placeholder par ta vidéo !')">
+            <div class="play-icon">
+                <svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
+            </div>
+            <p data-en="Click to play demo" data-fr="Cliquer pour lancer la démo">Click to play demo</p>
+        </div>
+    </div>
+</div>
+
+<!-- ── DESCRIPTION + TECH ── -->
+<div class="info-section fade-up delay-2">
+
+    <!-- Description -->
+    <div class="desc-block">
+        <h3 data-en="About this project" data-fr="À propos du projet">About this project</h3>
+        <p data-en="CyberSim is a fully local, interactive web simulation designed to raise awareness about online dangers. Users are immersed in a realistic digital environment — a smartphone or desktop — and face real-world cyber threats without any actual risk."
+           data-fr="CyberSim est une simulation web locale et interactive conçue pour sensibiliser aux dangers d'Internet. Les utilisateurs sont plongés dans un environnement numérique réaliste — smartphone ou ordinateur — et font face à de vraies cybermenaces, sans aucun risque réel.">
+            CyberSim is a fully local, interactive web simulation designed to raise awareness about online dangers. Users are immersed in a realistic digital environment — a smartphone or desktop — and face real-world cyber threats without any actual risk.
+        </p>
+        <p data-en="At the end of each simulation, a detailed report reveals every attack the user fell for, along with personalized security recommendations. A pedagogical explanations page then breaks down each threat and how to avoid it."
+           data-fr="À la fin de chaque simulation, un rapport détaillé révèle chaque attaque dont l'utilisateur a été victime, accompagné de recommandations de sécurité personnalisées. Une page d'explications pédagogiques détaille ensuite chaque menace et comment s'en protéger.">
+            At the end of each simulation, a detailed report reveals every attack the user fell for, along with personalized security recommendations. A pedagogical explanations page then breaks down each threat and how to avoid it.
+        </p>
+
+        <ul class="feature-list">
+            <li data-en="Phishing — fake Amazon email & fake bank SMS" data-fr="Phishing — faux email Amazon & faux SMS bancaire">Phishing — fake Amazon email &amp; fake bank SMS</li>
+            <li data-en="Credential theft via fake Instagram contest" data-fr="Vol d'identifiants via un faux concours Instagram">Credential theft via fake Instagram contest</li>
+            <li data-en="Grooming — social engineering DM scenario" data-fr="Grooming — scénario d'ingénierie sociale par DM">Grooming — social engineering DM scenario</li>
+            <li data-en="Man-in-the-Middle via unsecured Wi-Fi network" data-fr="Man-in-the-Middle via réseau Wi-Fi non sécurisé">Man-in-the-Middle via unsecured Wi-Fi network</li>
+            <li data-en="Malware install simulation (JeuGratuit.exe)" data-fr="Simulation d'installation de malware (JeuGratuit.exe)">Malware install simulation (JeuGratuit.exe)</li>
+            <li data-en="Webcam spyware — real camera access request" data-fr="Spyware webcam — vraie demande d'accès caméra">Webcam spyware — real camera access request</li>
+            <li data-en="Auto-generated stolen data report (.txt)" data-fr="Rapport automatique de données volées (.txt)">Auto-generated stolen data report (.txt)</li>
+        </ul>
+    </div>
+
+    <!-- Tech stack -->
+    <div class="tech-block">
+        <h3 data-en="Tech Stack" data-fr="Technologies">Tech Stack</h3>
+        <div class="tech-grid">
+            <div class="tech-chip"><i class="devicon-html5-plain colored"></i><span class="chip-label">HTML5</span></div>
+            <div class="tech-chip"><i class="devicon-css3-plain colored"></i><span class="chip-label">CSS3</span></div>
+            <div class="tech-chip"><i class="devicon-javascript-plain colored"></i><span class="chip-label">JavaScript</span></div>
+            <div class="tech-chip"><i class="devicon-python-plain colored"></i><span class="chip-label">Python</span></div>
+            <div class="tech-chip chip-custom"><span class="chip-icon-txt">💾</span><span class="chip-label">localStorage</span></div>
+            <div class="tech-chip chip-custom"><span class="chip-icon-txt">📹</span><span class="chip-label">WebRTC API</span></div>
+        </div>
+
+        <!-- Stats -->
+        <div class="stats-block">
+            <div class="stat-item">
+                <div class="stat-number">6</div>
+                <div class="stat-label" data-en="Attack types" data-fr="Types d'attaques">Attack types</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">2</div>
+                <div class="stat-label" data-en="Simulations" data-fr="Simulations">Simulations</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">5<span style="font-size:1rem">min</span></div>
+                <div class="stat-label" data-en="Average time" data-fr="Temps moyen">Average time</div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- ── HOW IT WORKS ── -->
+<div class="flow-section fade-up delay-3">
+    <div class="section-label" data-en="▸ HOW IT WORKS" data-fr="▸ FONCTIONNEMENT">▸ HOW IT WORKS</div>
+    <div class="flow-grid">
+        <div class="flow-step">
+            <div class="step-num">01</div>
+            <div class="step-icon">🏠</div>
+            <div class="step-title" data-en="Choose a simulation" data-fr="Choisir une simulation">Choose a simulation</div>
+            <div class="step-desc" data-en="Pick between the smartphone or desktop environment." data-fr="Choisissez entre l'environnement smartphone ou ordinateur.">Pick between the smartphone or desktop environment.</div>
+        </div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step">
+            <div class="step-num">02</div>
+            <div class="step-icon">⚠️</div>
+            <div class="step-title" data-en="Face cyber threats" data-fr="Affronter les menaces">Face cyber threats</div>
+            <div class="step-desc" data-en="Navigate realistic traps: phishing, malware, grooming and more." data-fr="Naviguez dans des pièges réalistes : phishing, malware, grooming et plus.">Navigate realistic traps: phishing, malware, grooming and more.</div>
+        </div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step">
+            <div class="step-num">03</div>
+            <div class="step-icon">📋</div>
+            <div class="step-title" data-en="Read your report" data-fr="Lire son rapport">Read your report</div>
+            <div class="step-desc" data-en="A detailed summary of every attack you fell for is generated." data-fr="Un résumé détaillé de chaque attaque dont vous avez été victime est généré.">A detailed summary of every attack you fell for is generated.</div>
+        </div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step">
+            <div class="step-num">04</div>
+            <div class="step-icon">🛡️</div>
+            <div class="step-title" data-en="Learn & protect yourself" data-fr="Apprendre & se protéger">Learn &amp; protect yourself</div>
+            <div class="step-desc" data-en="A pedagogical page explains each threat and how to stay safe." data-fr="Une page pédagogique explique chaque menace et comment rester en sécurité.">A pedagogical page explains each threat and how to stay safe.</div>
+        </div>
+    </div>
+</div>
+
+<!-- ── SCREENSHOTS ── -->
+<div class="gallery-section fade-up delay-4">
+    <div class="gallery-header">
+        <h2 data-en="Screenshots" data-fr="Captures d'écran">Screenshots</h2>
+    </div>
+    <div class="gallery-grid">
+
+        <div class="gallery-item" onclick="openLightbox(this)">
+            <img src="cyber1.png" alt="Home screen — choose simulation">
+            <div class="gallery-overlay"><span data-en="Home screen" data-fr="Écran d'accueil">Home screen</span></div>
+        </div>
+
+        <div class="gallery-item" onclick="openLightbox(this)">
+            <img src="cyber2.png" alt="Desktop simulation">
+            <div class="gallery-overlay"><span data-en="Desktop simulation" data-fr="Simulation Bureau">Desktop simulation</span></div>
+        </div>
+
+        <div class="gallery-item" onclick="openLightbox(this)">
+            <img src="cyber3.png" alt="Security report">
+            <div class="gallery-overlay"><span data-en="Security report" data-fr="Rapport de sécurité">Security report</span></div>
+        </div>
+
+        <div class="gallery-item" onclick="openLightbox(this)">
+            <img src="cyber4.png" alt="Phone simulation">
+            <div class="gallery-overlay"><span data-en="Phone Simulation" data-fr="Simulation téléphone">Phone Simulation</span></div>
+        </div>
+
+        <div class="gallery-item" onclick="openLightbox(this)">
+            <img src="cyber5.png" alt="Camspy real camera access request">
+            <div class="gallery-overlay"><span data-en="Camspy" data-fr="Camspy">Camspy</span></div>
+        </div>
+
+        <div class="gallery-item" onclick="openLightbox(this)">
+            <img src="cyber6.png" alt="Error System simulation">
+            <div class="gallery-overlay"><span data-en="Error System" data-fr="Erreur Système">Error System</span></div>
+        </div>
+
+    </div>
+</div>
+
+<!-- ── LIGHTBOX ── -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <button class="lightbox-close" onclick="closeLightbox()">✕ CLOSE</button>
+    <img id="lightboxImg" src="" alt="">
+</div>
+
+<!-- ── FOOTER ── -->
+<footer>
+    <p data-en="© 2026 Maxime SHU. All rights reserved." data-fr="© 2026 Maxime SHU. Tous droits réservés.">© 2026 Maxime SHU. All rights reserved.</p>
+</footer>
+
+<script src="cybersim.js"></script>
+
+<script>
+/* ── SCROLL REVEAL — re-joue à chaque passage ── */
+(function() {
+    const els = document.querySelectorAll('.fade-up');
+    const io = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+            if (e.isIntersecting) {
+                e.target.classList.add('visible');
+            } else {
+                e.target.classList.remove('visible');
+            }
+        });
+    }, { threshold: 0.1 });
+    els.forEach(el => io.observe(el));
+})();
+</script>
+
+</body>
+</html>
