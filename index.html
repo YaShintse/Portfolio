@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maxime Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Orbitron:wght@700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+
+    <style>
+    /* ── SCROLL REVEAL ── */
+    .reveal,
+    .reveal-left,
+    .reveal-right,
+    .reveal-scale {
+        opacity: 0;
+        transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .reveal         { transform: translateY(40px); }
+    .reveal-left    { transform: translateX(-50px); }
+    .reveal-right   { transform: translateX(50px); }
+    .reveal-scale   { transform: scale(0.88) translateY(20px); }
+
+    .reveal.visible,
+    .reveal-left.visible,
+    .reveal-right.visible,
+    .reveal-scale.visible {
+        opacity: 1;
+        transform: none;
+    }
+
+    /* stagger delays */
+    .stagger > *:nth-child(1) { transition-delay: 0.05s; }
+    .stagger > *:nth-child(2) { transition-delay: 0.12s; }
+    .stagger > *:nth-child(3) { transition-delay: 0.19s; }
+    .stagger > *:nth-child(4) { transition-delay: 0.26s; }
+    .stagger > *:nth-child(5) { transition-delay: 0.33s; }
+    .stagger > *:nth-child(6) { transition-delay: 0.40s; }
+    .stagger > *:nth-child(7) { transition-delay: 0.47s; }
+    .stagger > *:nth-child(8) { transition-delay: 0.54s; }
+    </style>
+
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo" style="font-family:'Montserrat',sans-serif;font-size:1rem;font-weight:300;letter-spacing:5px;text-transform:uppercase;color:#00f2ff;text-shadow:none;animation:none;">MAXIME <span style="font-weight:600;color:#00f2ff;">SHU</span></div>
+            <nav>
+                <ul>
+                    <li><a href="#about" data-en="About" data-fr="À propos">About</a></li>
+                    <li><a href="#projects" data-en="Projects" data-fr="Projets">Projects</a></li>
+                    <li><a href="#skills" data-en="Skills" data-fr="Compétences">Skills</a></li>
+                    <li><a href="#contact" data-en="Contact" data-fr="Contact">Contact</a></li>
+                </ul>
+            </nav>
+            <button id="langToggle" class="lang-btn">FR</button>
+        </div>
+    </header>
+
+    <section id="about" class="reveal">
+        <h2 data-en="About" data-fr="À propos">About</h2>
+        <div class="about-content">
+            <div class="profile-photo-container">
+                <div class="profile-photo">
+                    <img src="profile.jpg" alt="Maxime SHU">
+                </div>
+            </div>
+            <p data-en="Transforming business objectives into digital realities. As a Software Engineering student at ESIEA, I leverage technical expertise to build high-performance web solutions. From high-conversion landing pages to the deployment of complex applications, I focus on clean code, robust architecture, and rapid execution." 
+               data-fr="Je transforme vos objectifs business en réalités digitales. Étudiant en Ingénierie logicielle à l'ESIEA, je mets mon expertise technique au service de vos projets web. De la landing page haute conversion au déploiement d'applications complexes, je mise sur un code propre, une architecture robuste et une exécution rapide.">
+                Transforming business objectives into digital realities. As a Software Engineering student at ESIEA, I leverage technical expertise to build high-performance web solutions. From high-conversion landing pages to the deployment of complex applications, I focus on clean code, robust architecture, and rapid execution.
+            </p>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2 data-en="Projects" data-fr="Projets">Projects</h2>
+        <div class="projects-grid stagger">
+
+            <div class="project-card reveal-scale">
+                <div class="project-visual project-visual--finance">
+                    <div class="visual-inner">
+                        <div class="vis-bars">
+                            <div class="vis-bar" style="--h:60%"></div>
+                            <div class="vis-bar" style="--h:85%"></div>
+                            <div class="vis-bar" style="--h:45%"></div>
+                            <div class="vis-bar" style="--h:100%"></div>
+                            <div class="vis-bar" style="--h:70%"></div>
+                            <div class="vis-bar" style="--h:55%"></div>
+                        </div>
+                        <svg class="vis-trendline" viewBox="0 0 120 60" preserveAspectRatio="none">
+                            <polyline points="0,50 20,38 40,42 60,22 80,28 100,10 120,14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <span class="vis-tag">Finance</span>
+                </div>
+                <h3 data-en="Financial Management System" data-fr="Système de Gestion Financière">Financial Management System</h3>
+                <p data-en="Web application designed to manage company finances. Streamlined interface for tracking expenses, revenues, and financial operations with real-time data processing." 
+                   data-fr="Application web conçue pour gérer les finances de l'entreprise. Interface optimisée pour le suivi des dépenses, revenus et opérations financières avec traitement des données en temps réel.">
+                    Web application designed to manage company finances. Streamlined interface for tracking expenses, revenues, and financial operations with real-time data processing.
+                </p>
+                <a href="webfinance/webfinance-project.html" class="btn" data-en="View Project" data-fr="Voir le projet">View Project</a>
+            </div>
+
+            <div class="project-card reveal-scale">
+                <div class="project-visual project-visual--cyber">
+                    <div class="visual-inner">
+                        <svg class="vis-shield-svg" viewBox="0 0 80 90" fill="none">
+                            <path d="M40 6L8 18V42C8 60 22 76 40 82C58 76 72 60 72 42V18L40 6Z" stroke="currentColor" stroke-width="2.5" fill="rgba(0,242,255,0.06)"/>
+                            <path d="M28 44L36 52L54 34" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <div class="cyber-dots">
+                            <span></span><span></span><span></span>
+                            <span></span><span></span><span></span>
+                            <span></span><span></span><span></span>
+                        </div>
+                    </div>
+                    <span class="vis-tag">Cybersecurity</span>
+                </div>
+                <h3 data-en="Web Safety Awareness Platform" data-fr="Plateforme de Sensibilisation aux Dangers du Web">Web Safety Awareness Platform</h3>
+                <p data-en="Interactive website educating users about web security threats and online dangers. Engaging content and simulations to raise awareness about cybersecurity best practices." 
+                   data-fr="Site web interactif pour sensibiliser les utilisateurs aux menaces de sécurité et dangers en ligne. Contenu engageant et simulations pour promouvoir les bonnes pratiques de cybersécurité.">
+                    Interactive website educating users about web security threats and online dangers. Engaging content and simulations to raise awareness about cybersecurity best practices.
+                </p>
+                <a href="cybersecurite/cybersim.html" class="btn" data-en="View Project" data-fr="Voir le projet">View Project</a>
+            </div>
+
+            <div class="project-card reveal-scale">
+                <div class="project-visual project-visual--ai">
+                    <div class="visual-inner">
+                        <div class="ai-face">
+                            <div class="ai-eye"></div>
+                            <div class="ai-eye"></div>
+                        </div>
+                        <div class="ai-waves">
+                            <span></span><span></span><span></span><span></span><span></span>
+                        </div>
+                    </div>
+                    <span class="vis-tag">AI / Discord</span>
+                </div>
+                <h3 data-en="AI Virtual Assistant (Discord + VTube)" data-fr="Assistant Virtuel IA (Discord + VTube)">AI Virtual Assistant (Discord + VTube)</h3>
+                <p data-en="AI chatbot integrated into Discord with a virtual avatar via VTube Studio. Capable of listening, processing voice commands, and responding with both text and animated avatar expressions." 
+                   data-fr="Chatbot IA intégré à Discord avec un avatar virtuel via VTube Studio. Capable d'écouter, traiter des commandes vocales et répondre avec du texte et des expressions d'avatar animées.">
+                    AI chatbot integrated into Discord with a virtual avatar via VTube Studio. Capable of listening, processing voice commands, and responding with both text and animated avatar expressions.
+                </p>
+                <a href="tamaya/tamaya.html" class="btn" data-en="View Project" data-fr="Voir le projet">View Project</a>
+            </div>
+
+            <div class="project-card reveal-scale">
+                <div class="project-visual project-visual--pacman">
+                    <div class="visual-inner">
+                        <div class="pac-scene">
+                            <div class="pac-man"></div>
+                            <div class="pac-pellets">
+                                <span></span><span></span><span></span><span></span><span></span>
+                            </div>
+                            <div class="pac-ghost"></div>
+                        </div>
+                    </div>
+                    <span class="vis-tag">Python / Pygame</span>
+                </div>
+                <h3 data-en="Pacman Game" data-fr="Jeu Pac-Man">Pacman Game</h3>
+                <p data-en="Classic Pac-Man arcade game implemented in Python with pygame. Eat pellets, avoid ghosts, and clear levels." 
+                   data-fr="Jeu d'arcade Pac-Man classique implémenté en Python avec pygame. Mangez les pastilles, évitez les fantômes et terminez les niveaux.">
+                    Classic Pac-Man arcade game implemented in Python with pygame. Eat pellets, avoid ghosts, and clear levels.
+                </p>
+                <a href="Pacman/pacman.html" class="btn" data-en="View Project" data-fr="Voir le projet">View Project</a>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="skills" class="reveal">
+        <h2 data-en="Skills" data-fr="Compétences">Skills</h2>
+        <div class="skills-container">
+
+            <div class="skill-category">
+                <h3 data-en="Languages" data-fr="Langages">Languages</h3>
+                <div class="skill-grid stagger">
+                    <div class="skill-chip reveal-scale">
+                        <i class="devicon-html5-plain colored"></i>
+                        <span class="skill-name">HTML5</span>
+                        <span class="skill-sub">Markup</span>
+                    </div>
+                    <div class="skill-chip reveal-scale">
+                        <i class="devicon-css3-plain colored"></i>
+                        <span class="skill-name">CSS3</span>
+                        <span class="skill-sub">Stylesheet</span>
+                    </div>
+                    <div class="skill-chip reveal-scale">
+                        <i class="devicon-javascript-plain colored"></i>
+                        <span class="skill-name">JavaScript</span>
+                        <span class="skill-sub">Language</span>
+                    </div>
+                    <div class="skill-chip reveal-scale">
+                        <i class="devicon-python-plain colored"></i>
+                        <span class="skill-name">Python</span>
+                        <span class="skill-sub">Language</span>
+                    </div>
+                    <div class="skill-chip reveal-scale">
+                        <i class="devicon-java-plain colored"></i>
+                        <span class="skill-name">Java</span>
+                        <span class="skill-sub">Language</span>
+                    </div>
+                    <div class="skill-chip reveal-scale">
+                        <i class="devicon-cplusplus-plain colored"></i>
+                        <span class="skill-name">C / C++</span>
+                        <span class="skill-sub">Language</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <h3 data-en="Tools & Dev" data-fr="Outils & Dev">Tools &amp; Dev</h3>
+                <div class="skill-grid stagger">
+                    <div class="skill-chip reveal-scale">
+                        <i class="devicon-git-plain colored"></i>
+                        <span class="skill-name">Git</span>
+                        <span class="skill-sub">Version Control</span>
+                    </div>
+                    <div class="skill-chip reveal-scale">
+                        <i class="devicon-github-original"></i>
+                        <span class="skill-name">GitHub</span>
+                        <span class="skill-sub">Repository</span>
+                    </div>
+                    <div class="skill-chip reveal-scale">
+                        <i class="devicon-vscode-plain colored"></i>
+                        <span class="skill-name">VS Code</span>
+                        <span class="skill-sub">Code Editor</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <h3 data-en="Creative" data-fr="Créatif">Creative</h3>
+                <div class="skill-grid stagger">
+                    <div class="skill-chip reveal-scale">
+                        <i class="devicon-aftereffects-plain colored"></i>
+                        <span class="skill-name">After Effects</span>
+                        <span class="skill-sub">Motion Design</span>
+                    </div>
+                    <div class="skill-chip reveal-scale">
+                        <i class="devicon-premierepro-plain colored"></i>
+                        <span class="skill-name">Premiere Pro</span>
+                        <span class="skill-sub">Video Editing</span>
+                    </div>
+                    <div class="skill-chip reveal-scale">
+                        <i class="devicon-photoshop-plain colored"></i>
+                        <span class="skill-name">Photoshop</span>
+                        <span class="skill-sub">Photo Editing</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="contact" class="reveal">
+        <h2 data-en="Contact" data-fr="Contact">Contact</h2>
+        <div class="contact-links">
+            <a href="https://www.linkedin.com/in/maxime-shu-9ba260305/" target="_blank" class="contact-btn">LinkedIn</a>
+            <a href="mailto:shintsepro@gmail.com" class="contact-btn contact-btn--email">Email</a>
+        </div>
+    </section>
+
+    <footer>
+        <p data-en="© 2026 Maxime SHU. All rights reserved." data-fr="© 2026 Maxime SHU. Tous droits réservés.">© 2026 Maxime SHU. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+    <script>
+    /* ── SCROLL REVEAL — re-joue à chaque passage ── */
+    (function() {
+        const els = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale');
+        const io = new IntersectionObserver((entries) => {
+            entries.forEach(e => {
+                if (e.isIntersecting) {
+                    e.target.classList.add('visible');
+                } else {
+                    e.target.classList.remove('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+        els.forEach(el => io.observe(el));
+    })();
+    </script>
+
+</body>
+</html>
