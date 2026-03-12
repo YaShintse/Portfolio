@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pac-Man Project — Maxime SHU</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Orbitron:wght@700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="pacman.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+
+    <style>
+    /* Override fade-up pour qu'il soit contrôlé par JS */
+    .fade-up {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity 0.7s ease, transform 0.7s ease;
+        animation: none !important;
+    }
+    .fade-up.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="header-content">
+        <a href="../index.html" class="back-btn" style="text-decoration:none;cursor:pointer;">
+            ← <span data-en="BACK" data-fr="RETOUR">BACK</span>
+        </a>
+        <a href="../index.html" class="logo" style="text-decoration:none;cursor:pointer;pointer-events:auto;">Maxime <span>SHU</span></a>
+        <button id="langToggle" class="lang-btn">FR</button>
+    </div>
+</header>
+
+<div class="hero fade-up">
+    <div class="project-tag" data-en="GAME DEVELOPMENT PROJECT" data-fr="PROJET DE DÉVELOPPEMENT DE JEU">GAME DEVELOPMENT PROJECT</div>
+    <h1 class="hero-title">
+        <span>PAC-MAN</span><br>
+        <span style="color:#fff; font-size:0.55em; letter-spacing:4px;" data-en="ARCADE REVIVAL" data-fr="REVIVAL ARCADE">ARCADE REVIVAL</span>
+    </h1>
+    <div class="hero-meta">
+        <span class="meta-pill tech">Python · Pygame</span>
+        <span class="meta-pill year" data-en="2024 " data-fr="2024">2024</span>
+        <span class="meta-pill type" data-en="Game Dev" data-fr="Jeu Vidéo">Game Dev</span>
+        <span class="meta-pill type" style="border-color:#ffe000;color:#ffe000;background:rgba(255,224,0,0.08);" data-en="Dijkstra AI" data-fr="IA Dijkstra">Dijkstra AI</span>
+    </div>
+</div>
+
+<div class="video-section fade-up delay-1">
+    <div class="section-label" data-en="▸ GAMEPLAY DEMO" data-fr="▸ DÉMO GAMEPLAY">▸ GAMEPLAY DEMO</div>
+    <div class="video-wrapper">
+                <video controls autoplay muted loop>
+                    <source src="pacman.mp4" type="video/mp4">
+                </video>
+        <div class="video-placeholder" onclick="alert('Remplace ce placeholder par ta vidéo !')">
+            <div class="play-icon">
+                <svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
+            </div>
+            <p data-en="Click to play demo" data-fr="Cliquer pour lancer la démo">Click to play demo</p>
+        </div>
+    </div>
+</div>
+
+<div class="info-section fade-up delay-2">
+
+    <div class="desc-block">
+        <h3 data-en="About this project" data-fr="À propos du projet">About this project</h3>
+        <p data-en="A Python Pac-Man game built with Pygame featuring 5 unique hand-crafted mazes selected at random each game. The project focuses on a clean game loop, tile-based collision detection, and a wrap-around tunnel system on maze borders."
+           data-fr="Un jeu Pac-Man en Python construit avec Pygame, proposant 5 labyrinthes uniques sélectionnés aléatoirement à chaque partie. Le projet met l'accent sur une boucle de jeu propre, une détection de collision par tuiles et un système de tunnel sur les bords du labyrinthe.">
+            A Python Pac-Man game built with Pygame featuring 5 unique hand-crafted mazes selected at random each game. The project focuses on a clean game loop, tile-based collision detection, and a wrap-around tunnel system on maze borders.
+        </p>
+        <p data-en="The ghost uses a Dijkstra pathfinding algorithm to always compute the shortest path to the player in real time — it switches to a frightened grey sprite when Pac-Man eats a power pellet, letting you turn the tables."
+           data-fr="Le fantôme utilise l'algorithme de Dijkstra pour calculer en temps réel le chemin le plus court vers le joueur. Il passe en mode fuite (sprite gris) lorsque Pac-Man mange une super pastille, permettant d'inverser les rôles.">
+            The ghost uses a Dijkstra pathfinding algorithm to always compute the shortest path to the player in real time — it switches to a frightened grey sprite when Pac-Man eats a power pellet, letting you turn the tables.
+        </p>
+        <ul class="feature-list">
+            <li data-en="5 unique random mazes selected at game start" data-fr="5 labyrinthes uniques sélectionnés aléatoirement au démarrage">5 unique random mazes selected at game start</li>
+            <li data-en="Ghost AI powered by Dijkstra shortest-path algorithm" data-fr="IA du fantôme basée sur l'algorithme Dijkstra (chemin le plus court)">Ghost AI powered by Dijkstra shortest-path algorithm</li>
+            <li data-en="Frightened mode — ghost turns grey after power pellet" data-fr="Mode fuite — le fantôme devient gris après une super pastille">Frightened mode — ghost turns grey after power pellet</li>
+            <li data-en="Wrap-around tunnel on maze borders (left ↔ right)" data-fr="Tunnel sur les bords du labyrinthe (gauche ↔ droite)">Wrap-around tunnel on maze borders (left ↔ right)</li>
+            <li data-en="3 lives, real-time score, animated start &amp; Game Over screens" data-fr="3 vies, score en temps réel, écrans de démarrage et Game Over animés">3 lives, real-time score, animated start &amp; Game Over screens</li>
+            <li data-en="Victory screen with trophy &amp; R to restart" data-fr="Écran de victoire avec trophée et R pour rejouer">Victory screen with trophy &amp; R to restart</li>
+            <li data-en="100 FPS smooth rendering with Pygame" data-fr="Rendu fluide 100 FPS avec Pygame">100 FPS smooth rendering with Pygame</li>
+        </ul>
+    </div>
+
+    <div class="tech-block">
+        <h3 data-en="Tech Stack" data-fr="Technologies">Tech Stack</h3>
+        <div class="tech-grid">
+            <div class="tech-chip"><i class="devicon-python-plain colored"></i><span class="chip-label">Python 3</span></div>
+            <div class="tech-chip"><i class="devicon-pygame-plain colored">🎮</i><span class="chip-label">Pygame</span></div>
+            <div class="tech-chip chip-custom"><span class="chip-icon-txt">🧠</span><span class="chip-label">Dijkstra AI</span></div>
+            <div class="tech-chip chip-custom"><span class="chip-icon-txt">🗺️</span><span class="chip-label">Tile Maps</span></div>
+            <div class="tech-chip chip-custom"><span class="chip-icon-txt">💥</span><span class="chip-label">Collision Det.</span></div>
+            <div class="tech-chip chip-custom"><span class="chip-icon-txt">🎲</span><span class="chip-label">Random Levels</span></div>
+        </div>
+    </div>
+
+</div>
+
+<!-- ── DEVELOPMENT JOURNEY ── -->
+<div class="dev-journey-section fade-up delay-3">
+    <div class="section-label" data-en="▸ DEVELOPMENT JOURNEY" data-fr="▸ PARCOURS DE DÉVELOPPEMENT">▸ DEVELOPMENT JOURNEY</div>
+    
+    <div class="timeline-container">
+        <div class="timeline-bar">
+            <div class="progress-line"></div>
+        </div>
+        
+        <div class="timeline-steps">
+            <div class="timeline-step active" onclick="updateTimeline(0)" data-step="0">
+                <div class="step-marker"></div>
+                <div class="step-label">V0.1</div>
+            </div>
+            <div class="timeline-step" onclick="updateTimeline(1)" data-step="1">
+                <div class="step-marker"></div>
+                <div class="step-label">V0.5</div>
+            </div>
+            <div class="timeline-step" onclick="updateTimeline(2)" data-step="2">
+                <div class="step-marker"></div>
+                <div class="step-label">V0.8</div>
+            </div>
+            <div class="timeline-step" onclick="updateTimeline(3)" data-step="3">
+                <div class="step-marker"></div>
+                <div class="step-label">V1.0</div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="timeline-content">
+        <h3 id="timelineTitle">Engine Init</h3>
+        <p id="timelineDesc">Pygame engine initialization and grid system</p>
+    </div>
+</div>
+
+<div class="gallery-section fade-up delay-4">
+    <div class="gallery-header">
+        <h2 data-en="Screenshots" data-fr="Captures d'écran">Screenshots</h2>
+    </div>
+
+    <div class="gallery-grid">
+
+        <div class="gallery-item" onclick="openLightbox(this)">
+            <img src="pacman1.png" alt="Gameplay">
+            <div class="gallery-overlay"><span data-en="Gameplay" data-fr="Gameplay">Gameplay</span></div>
+        </div>
+
+        <div class="gallery-item" onclick="openLightbox(this)">
+            <img src="pacman2.png" alt="Ghost: chase mode">
+            <div class="gallery-overlay"><span data-en="Ghost: chase mode" data-fr=" fantômes: Mode poursuite">Ghost: chase mode</span></div>
+        </div>
+
+        <div class="gallery-item" onclick="openLightbox(this)">
+            <img src="pacman3.png" alt="Power pellet — frighten mode">
+            <div class="gallery-overlay"><span data-en="Power pellet — frighten mode" data-fr="Super pastille — mode peur">Power pellet — frighten mode</span></div>
+        </div>
+
+        <div class="gallery-item" onclick="openLightbox(this)">
+            <img src="pacman4.png" alt="Victory screen">
+            <div class="gallery-overlay"><span data-en="Victory screen" data-fr="Écran de Victoire">Victory screen</span></div>
+        </div>
+
+        <div class="gallery-item" onclick="openLightbox(this)">
+            <img src="pacman5.png" alt="Game Over screen">
+            <div class="gallery-overlay"><span data-en="Game Over screen" data-fr="Écran Game Over ">Game Over screen</span></div>
+        </div>
+
+        <div class="gallery-item" onclick="openLightbox(this)">
+            <img src="pacman6.png" alt="Start screen">
+            <div class="gallery-overlay"><span data-en=" Start screen" data-fr="Écran de démarrage">Start screen</span></div>
+        </div>
+
+    </div>
+</div>
+
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <button class="lightbox-close" onclick="closeLightbox()">✕ CLOSE</button>
+    <img id="lightboxImg" src="" alt="">
+</div>
+
+<footer>
+    <p data-en="© 2026 Maxime SHU. All rights reserved." data-fr="© 2026 Maxime SHU. Tous droits réservés.">© 2026 Maxime SHU. All rights reserved.</p>
+</footer>
+
+<script src="pacman.js"></script>
+
+<script>
+/* ── DEVELOPMENT JOURNEY TIMELINE ── */
+const timelineData = [
+    {
+        en: { title: "Engine Init", desc: "Pygame engine initialization and grid system for collision detection. Foundation of the game loop and tile-based movement." },
+        fr: { title: "Initialisation", desc: "Initialisation du moteur Pygame et système de grille pour la détection de collision. Fondation de la boucle de jeu et du mouvement par tuiles." }
+    },
+    {
+        en: { title: "Movement & Sprites", desc: "Smooth character movement implemented with sprite animations. Added tunnel wrap-around system on maze borders for seamless navigation." },
+        fr: { title: "Mouvement & Sprites", desc: "Mouvement fluide du personnage avec animations de sprites. Ajout du système de tunnel sur les bords du labyrinthe pour la navigation continue." }
+    },
+    {
+        en: { title: "Dijkstra AI", desc: "Integration of Dijkstra shortest-path algorithm for intelligent ghost behavior. Real-time pathfinding ensures dynamic chase mechanics." },
+        fr: { title: "IA Dijkstra", desc: "Intégration de l'algorithme Dijkstra pour le calcul du chemin le plus court. Recherche de chemin en temps réel pour l'IA dynamique." }
+    },
+    {
+        en: { title: "Release v1.0", desc: "5 unique procedural mazes, power pellet fright mode (ghost turns grey), victory & game over screens, and 100 FPS rendering optimization." },
+        fr: { title: "Version 1.0", desc: "5 labyrinthes uniques procéduraux, mode fuite (le fantôme devient gris), écrans de victoire et Game Over, et optimisation 100 FPS." }
+    }
+];
+
+let currentStep = 0;
+
+function updateTimeline(newStep) {
+    const steps = document.querySelectorAll('.timeline-step');
+    const contentBox = document.querySelector('.timeline-content');
+    const titleEl = document.getElementById('timelineTitle');
+    const descEl = document.getElementById('timelineDesc');
+    const progressLine = document.querySelector('.progress-line');
+    
+    // Remove active class
+    steps.forEach(s => s.classList.remove('active'));
+    
+    // Add active to new step
+    steps[newStep].classList.add('active');
+    
+    // Get current language
+    const lang = document.documentElement.lang === 'fr' ? 'fr' : 'en';
+    const data = timelineData[newStep][lang];
+    
+    // Update content with fade effect
+    contentBox.style.opacity = '0';
+    setTimeout(() => {
+        titleEl.textContent = data.title;
+        descEl.textContent = data.desc;
+        contentBox.style.opacity = '1';
+    }, 150);
+    
+    // Update progress bar
+    const progressPercent = ((newStep + 1) / timelineData.length) * 100;
+    progressLine.style.width = progressPercent + '%';
+    
+    currentStep = newStep;
+}
+
+// Listen for language changes to update timeline
+document.addEventListener('DOMContentLoaded', () => {
+    const langToggle = document.getElementById('langToggle');
+    const observer = new MutationObserver(() => {
+        updateTimeline(currentStep); // Refresh timeline with new language
+    });
+    
+    observer.observe(document.documentElement, {
+        attributes: true,
+        attributeFilter: ['lang']
+    });
+});
+
+// Add transition effect to content box
+const style = document.createElement('style');
+style.textContent = `
+    .timeline-content {
+        transition: opacity 0.3s ease;
+    }
+`;
+document.head.appendChild(style);
+</script>
+
+<script>
+/* ── SCROLL REVEAL — re-joue à chaque passage ── */
+(function() {
+    const els = document.querySelectorAll('.fade-up');
+    const io = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+            if (e.isIntersecting) {
+                e.target.classList.add('visible');
+            } else {
+                e.target.classList.remove('visible');
+            }
+        });
+    }, { threshold: 0.1 });
+    els.forEach(el => io.observe(el));
+})();
+</script>
+
+</body>
+</html>
