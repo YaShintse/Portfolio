@@ -167,6 +167,26 @@
                 <a href="Pacman/pacman.html" class="btn" data-en="View Project" data-fr="Voir le projet">View Project</a>
             </div>
 
+            <div class="project-card reveal-scale">
+                <div class="project-visual project-visual--particle">
+                    <div class="visual-inner">
+                        <canvas class="particle-canvas" id="particleCanvas"></canvas>
+                        <div class="particle-hand">
+                            <svg viewBox="0 0 60 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M30 60 C20 55 10 45 10 32 L10 18 C10 15 12 13 15 13 C18 13 20 15 20 18 L20 10 C20 7 22 5 25 5 C28 5 30 7 30 10 L30 8 C30 5 32 3 35 3 C38 3 40 5 40 8 L40 12 C40 9 42 7 45 7 C48 7 50 9 50 12 L50 35 C50 48 42 58 30 60Z" stroke="rgba(167,139,250,0.7)" stroke-width="1.5" fill="rgba(167,139,250,0.05)"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <span class="vis-tag">Three.js · MediaPipe</span>
+                </div>
+                <h3 data-en="Particle Universe" data-fr="Particle Universe">Particle Universe</h3>
+                <p data-en="Real-time 3D particle engine controlled by hand gestures. 3 000 particles morph into 8 procedural shapes — heart, galaxy, DNA, torus and more — rendered at 60 fps via WebGL."
+                   data-fr="Moteur de particules 3D en temps réel piloté par gestes. 3 000 particules se morphent en 8 formes procédurales — cœur, galaxie, ADN, tore et plus — rendu à 60 fps via WebGL.">
+                    Real-time 3D particle engine controlled by hand gestures. 3 000 particles morph into 8 procedural shapes — heart, galaxy, DNA, torus and more — rendered at 60 fps via WebGL.
+                </p>
+                <a href="particule/particle-page.html" class="btn" data-en="View Project" data-fr="Voir le projet">View Project</a>
+            </div>
+
         </div>
     </section>
 
@@ -259,7 +279,7 @@
         <h2 data-en="Contact" data-fr="Contact">Contact</h2>
         <div class="contact-links">
             <a href="https://www.linkedin.com/in/maxime-shu-9ba260305/" target="_blank" class="contact-btn">LinkedIn</a>
-            <a href="mailto:shintsepro@gmail.com" class="contact-btn contact-btn--email">Email</a>
+            <a href="/cdn-cgi/l/email-protection#8bfbf9e4a5e6eaf3e2e6eef8e3fecbece6eae2e7a5e8e4e6" class="contact-btn contact-btn--email">Email</a>
         </div>
     </section>
 
@@ -267,7 +287,7 @@
         <p data-en="© 2026 Maxime SHU. All rights reserved." data-fr="© 2026 Maxime SHU. Tous droits réservés.">© 2026 Maxime SHU. All rights reserved.</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="script.js"></script>
 
     <script>
     /* ── SCROLL REVEAL — re-joue à chaque passage ── */
@@ -281,7 +301,7 @@
                     e.target.classList.remove('visible');
                 }
             });
-        }, { threshold: 0.1 });
+        }, { threshold: 0.15 });
         els.forEach(el => io.observe(el));
     })();
     </script>
