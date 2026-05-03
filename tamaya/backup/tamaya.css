@@ -7,7 +7,6 @@
     --neon-lilac:   #d8b4fe;
     --neon-white:   #f0eeff;
     --neon-magenta: #ff00ff;
-    --neon-cyan:    #00cfff;
     --card-bg:      rgba(10, 20, 40, 0.6);
 }
 
@@ -19,89 +18,23 @@ body {
     overflow-x: hidden;
 }
 
-.tamaya-bg {
+body::before {
+    content: '';
     position: fixed;
     inset: 0;
+    background-image:
+        linear-gradient(rgba(139,0,255,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(139,0,255,0.04) 1px, transparent 1px);
+    background-size: 50px 50px;
     z-index: 0;
-    overflow: hidden;
     pointer-events: none;
-    background: radial-gradient(circle at center, #0a0520 0%, var(--dark-bg) 100%);
-}
-
-.hud-ring {
-    position: absolute;
-    top: 50%; left: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 50%;
-    border: 2px dashed rgba(192, 132, 252, 0.1);
-    width: 80vw;
-    height: 80vw;
-    animation: spinHUD 60s linear infinite;
-}
-
-.hud-ring-inner {
-    position: absolute;
-    top: 50%; left: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 50%;
-    border: 1px dashed rgba(0, 207, 255, 0.1);
-    width: 60vw;
-    height: 60vw;
-    animation: spinHUD 40s linear infinite reverse;
-}
-
-.core-ring {
-    position: absolute;
-    top: 50%; left: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 50%;
-    border: 1px solid var(--neon-purple);
-    box-shadow: 0 0 20px rgba(192, 132, 252, 0.15), inset 0 0 20px rgba(139, 0, 255, 0.15);
-    opacity: 0;
-}
-
-.core-ring-1 { animation: pulseRing 6s cubic-bezier(0.215, 0.61, 0.355, 1) infinite; }
-.core-ring-2 { animation: pulseRing 6s cubic-bezier(0.215, 0.61, 0.355, 1) infinite; animation-delay: 3s; }
-
-.spark {
-    position: absolute;
-    width: 4px;
-    height: 4px;
-    background: var(--neon-cyan);
-    border-radius: 50%;
-    box-shadow: 0 0 12px var(--neon-cyan), 0 0 20px var(--neon-cyan);
-    animation: floatSpark 15s linear infinite;
-    opacity: 0;
-}
-
-.spark-1 { left: 15%; bottom: -10px; animation-duration: 12s; animation-delay: 0s; background: var(--neon-purple); box-shadow: 0 0 12px var(--neon-purple); }
-.spark-2 { left: 35%; bottom: -10px; animation-duration: 18s; animation-delay: 3s; }
-.spark-3 { left: 55%; bottom: -10px; animation-duration: 14s; animation-delay: 1s; background: var(--neon-magenta); box-shadow: 0 0 12px var(--neon-magenta); }
-.spark-4 { left: 75%; bottom: -10px; animation-duration: 20s; animation-delay: 5s; }
-.spark-5 { left: 85%; bottom: -10px; animation-duration: 16s; animation-delay: 2s; background: var(--neon-purple); box-shadow: 0 0 12px var(--neon-purple); }
-.spark-6 { left: 25%; bottom: -10px; animation-duration: 22s; animation-delay: 7s; }
-
-@keyframes spinHUD {
-    0% { transform: translate(-50%, -50%) rotate(0deg); }
-    100% { transform: translate(-50%, -50%) rotate(360deg); }
-}
-
-@keyframes pulseRing {
-    0% { width: 5vw; height: 5vw; opacity: 0.8; border-width: 3px; }
-    100% { width: 90vw; height: 90vw; opacity: 0; border-width: 1px; }
-}
-
-@keyframes floatSpark {
-    0% { transform: translateY(0) translateX(0) scale(1); opacity: 0; }
-    10% { opacity: 1; }
-    90% { opacity: 1; }
-    100% { transform: translateY(-110vh) translateX(50px) scale(0.5); opacity: 0; }
 }
 
 ::-webkit-scrollbar { width: 8px; }
 ::-webkit-scrollbar-track { background: var(--dark-bg); }
 ::-webkit-scrollbar-thumb { background: var(--neon-violet); border-radius: 4px; }
 
+/* ─── HEADER ─── */
 header {
     padding: 1.5rem 5%;
     backdrop-filter: blur(10px);
@@ -185,6 +118,7 @@ header {
 .lang-btn:hover { color: var(--dark-bg); box-shadow: 0 0 20px rgba(255,0,255,0.6); }
 .lang-btn:hover::before { left: 0; }
 
+/* ─── HERO ─── */
 .hero {
     max-width: 1300px;
     margin: 0 auto;
@@ -252,15 +186,16 @@ header {
     text-transform: uppercase;
 }
 
-.meta-pill.tech    { border: 1px solid #c084fc;  color: #c084fc;  background: rgba(192,132,252,0.08); }
-.meta-pill.year    { border: 1px solid #ff00ff;  color: #ff00ff;  background: rgba(255,0,255,0.08);   }
-.meta-pill.type    { border: 1px solid #00cfff;  color: #00cfff;  background: rgba(0,207,255,0.08);   }
-.meta-pill.type2   { border: 1px solid #ff6bcb;  color: #ff6bcb;  background: rgba(255,107,203,0.08); }
-.meta-pill.type3   { border: 1px solid #8b00ff;  color: #b57bff;  background: rgba(139,0,255,0.08);   }
-.meta-pill.type4   { border: 1px solid #00ff9f;  color: #00ff9f;  background: rgba(0,255,159,0.08);   }
-.meta-pill.type5   { border: 1px solid #ff8c00;  color: #ff8c00;  background: rgba(255,140,0,0.08);   }
-.meta-pill.type6   { border: 1px solid #ff2d55;  color: #ff2d55;  background: rgba(255,45,85,0.08);   }
+.meta-pill.tech    { border: 1px solid #c084fc;  color: #c084fc;  background: rgba(192,132,252,0.08); } /* Python · Ollama — violet clair */
+.meta-pill.year    { border: 1px solid #ff00ff;  color: #ff00ff;  background: rgba(255,0,255,0.08);   } /* 2025 — magenta */
+.meta-pill.type    { border: 1px solid #00cfff;  color: #00cfff;  background: rgba(0,207,255,0.08);   } /* Artificial Intelligence — cyan */
+.meta-pill.type2   { border: 1px solid #ff6bcb;  color: #ff6bcb;  background: rgba(255,107,203,0.08); } /* Discord Bot — rose */
+.meta-pill.type3   { border: 1px solid #8b00ff;  color: #b57bff;  background: rgba(139,0,255,0.08);   } /* VTUBE STUDIO — violet foncé */
+.meta-pill.type4   { border: 1px solid #00ff9f;  color: #00ff9f;  background: rgba(0,255,159,0.08);   } /* EDGE TTS — vert néon */
+.meta-pill.type5   { border: 1px solid #ff8c00;  color: #ff8c00;  background: rgba(255,140,0,0.08);   } /* FASTER-WHISPER — orange */
+.meta-pill.type6   { border: 1px solid #ff2d55;  color: #ff2d55;  background: rgba(255,45,85,0.08);   } /* WEBSOCKET / PYVTS — rouge vif */
 
+/* ─── VIDEO ─── */
 .video-section {
     max-width: 1300px;
     margin: 0 auto;
@@ -338,6 +273,7 @@ header {
     text-transform: uppercase;
 }
 
+/* ─── INFO SECTION ─── */
 .info-section {
     max-width: 1300px;
     margin: 0 auto;
@@ -417,6 +353,7 @@ header {
 .tech-chip .chip-label { font-size: 0.83rem; font-weight: 600; color: #d0d0d0; }
 .tech-chip.chip-custom .chip-icon-txt { font-size: 1.4rem; flex-shrink: 0; line-height: 1; }
 
+/* Stats */
 .stats-block {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -447,6 +384,7 @@ header {
     font-family: 'Orbitron', sans-serif;
 }
 
+/* ─── FLOW SECTION ─── */
 .flow-section {
     max-width: 1300px;
     margin: 0 auto;
@@ -528,6 +466,7 @@ header {
     flex-shrink: 0;
 }
 
+/* ─── GALLERY ─── */
 .gallery-section {
     max-width: 1300px;
     margin: 0 auto;
@@ -609,6 +548,7 @@ header {
     text-transform: uppercase;
 }
 
+/* ─── LIGHTBOX ─── */
 .lightbox {
     display: none;
     position: fixed;
@@ -648,6 +588,7 @@ header {
     color: var(--dark-bg);
 }
 
+/* ─── FOOTER ─── */
 footer {
     text-align: center;
     padding: 2rem;
@@ -658,6 +599,7 @@ footer {
     z-index: 1;
 }
 
+/* ─── ANIMATIONS ─── */
 .fade-up {
     opacity: 0;
     transform: translateY(30px);
@@ -675,6 +617,7 @@ footer {
 .delay-3 { transition-delay: 0.4s; }
 .delay-4 { transition-delay: 0.55s; }
 
+/* ─── TAMAYA CARD ─── */
 .tamaya-card-section {
     max-width: 1300px;
     margin: 0 auto;
@@ -705,6 +648,7 @@ footer {
     pointer-events: none;
 }
 
+/* Face */
 .tamaya-face {
     flex-shrink: 0;
     width: 180px;
@@ -782,6 +726,7 @@ footer {
     50% { transform: scaleY(1); opacity: 1; }
 }
 
+/* Info */
 .tamaya-info { flex: 1; position: relative; z-index: 1; }
 
 .tamaya-info h2 {
@@ -831,6 +776,7 @@ footer {
     text-transform: uppercase;
 }
 
+/* ─── ARCHITECTURE ─── */
 .archi-section {
     max-width: 1300px;
     margin: 0 auto;
@@ -858,6 +804,7 @@ footer {
     background: linear-gradient(90deg, var(--neon-purple), var(--neon-violet), transparent);
 }
 
+/* Flow bar */
 .archi-flow {
     background: rgba(0,0,0,0.3);
     border: 1px solid rgba(139,0,255,0.15);
@@ -911,6 +858,7 @@ footer {
     font-size: 1.1rem;
 }
 
+/* Module cards */
 .archi-modules {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -957,6 +905,7 @@ footer {
     line-height: 1.7;
 }
 
+/* ─── RESPONSIVE ─── */
 @media (max-width: 900px) {
     .info-section { grid-template-columns: 1fr; gap: 2.5rem; }
     .flow-grid { flex-direction: column; }

@@ -10,19 +10,7 @@
 </head>
 <body>
 
-<div class="tamaya-bg">
-    <div class="hud-ring"></div>
-    <div class="hud-ring-inner"></div>
-    <div class="core-ring core-ring-1"></div>
-    <div class="core-ring core-ring-2"></div>
-    <div class="spark spark-1"></div>
-    <div class="spark spark-2"></div>
-    <div class="spark spark-3"></div>
-    <div class="spark spark-4"></div>
-    <div class="spark spark-5"></div>
-    <div class="spark spark-6"></div>
-</div>
-
+<!-- ── HEADER ── -->
 <header>
     <div class="header-content">
         <a href="../index.html" class="back-btn" style="text-decoration:none;cursor:pointer;">
@@ -33,6 +21,7 @@
     </div>
 </header>
 
+<!-- ── HERO ── -->
 <div class="hero fade-up">
     <div class="project-tag" data-en="AI / DISCORD / VTUBE STUDIO PROJECT" data-fr="PROJET IA / DISCORD / VTUBE STUDIO">AI / DISCORD / VTUBE STUDIO PROJECT</div>
     <h1 class="hero-title">
@@ -51,6 +40,7 @@
     </div>
 </div>
 
+<!-- ── VIDEO ── -->
 <div class="video-section fade-up delay-1">
     <div class="section-label" data-en="▸ DEMO VIDEO" data-fr="▸ VIDÉO DE DÉMONSTRATION">▸ DEMO VIDEO</div>
     <div class="video-wrapper">
@@ -66,7 +56,10 @@
     </div>
 </div>
 
+<!-- ── DESCRIPTION + TECH ── -->
 <div class="info-section fade-up delay-2">
+
+    <!-- Description -->
     <div class="desc-block">
         <h3 data-en="About this project" data-fr="À propos du projet">About this project</h3>
         <p data-en="Tamaya is an autonomous AI VTuber that lives inside Discord. She listens to voice conversations, decides on her own whether to respond, generates unpredictable replies through a local LLM, speaks with a neural voice, and animates a VTube Studio avatar — all in real time."
@@ -88,6 +81,7 @@
         </ul>
     </div>
 
+    <!-- Tech stack -->
     <div class="tech-block">
         <h3 data-en="Tech Stack" data-fr="Technologies">Tech Stack</h3>
         <div class="tech-grid">
@@ -99,6 +93,7 @@
             <div class="tech-chip chip-custom"><span class="chip-icon-txt">🎭</span><span class="chip-label">pyvts / VTube</span></div>
         </div>
 
+        <!-- Stats -->
         <div class="stats-block" style="margin-top:1.8rem; padding-top:1.5rem; border-top:1px solid rgba(139,0,255,0.12);">
             <div class="stat-item">
                 <div class="stat-number">5</div>
@@ -114,12 +109,15 @@
             </div>
         </div>
     </div>
+
 </div>
 
+<!-- ── ARCHITECTURE ── -->
 <div class="archi-section fade-up">
     <div class="section-label" data-en="▸ SYSTEM DESIGN" data-fr="▸ CONCEPTION SYSTÈME">▸ SYSTEM DESIGN</div>
     <h2 class="archi-title" data-en="Architecture" data-fr="Architecture">Architecture</h2>
 
+    <!-- Flow bar -->
     <div class="archi-flow">
         <div class="archi-node archi-node--blue">
             <span class="archi-icon">🎙️</span>
@@ -152,12 +150,13 @@
         </div>
     </div>
 
+    <!-- Module cards -->
     <div class="archi-modules">
         <div class="archi-module">
             <div class="archi-module-icon">🧠</div>
             <div class="archi-module-name">AI BRAIN</div>
             <div class="archi-module-file">ai_brain.py</div>
-            <div class="archi-module-desc" data-en="Drives Tamaya's entire personality. Interfaces with Ollama/Mistral locally. Manages conversation history, decides whether to respond, and can generate spontaneous comments unprompted — her free will system." data-fr="Pilote toute la personnalité de Tamaya. Interface avec Ollama/Mistral en local. Gère l'historique, décide de répondre ou non et génère des commentaires spontanés — son système de libre arbitre.">Drives Tamaya's entire personality. Interfaces with Ollama/Mistral locally. Manages conversation history, decides whether to respond, and can generate spontaneous comments unprompted — her free will system.</div>
+            <div class="archi-module-desc" data-en="Drives Tamaya's entire personality. Interfaces with Ollama/Mistral locally. Manages conversation history, decides whether to respond, and can generate spontaneous comments unprompted — her "free will" system." data-fr="Pilote toute la personnalité de Tamaya. Interface avec Ollama/Mistral en local. Gère l'historique, décide de répondre ou non et génère des commentaires spontanés — son système de libre arbitre.">Drives Tamaya's entire personality. Interfaces with Ollama/Mistral locally. Manages conversation history, decides whether to respond, and can generate spontaneous comments unprompted — her "free will" system.</div>
         </div>
         <div class="archi-module">
             <div class="archi-module-icon">🎭</div>
@@ -186,6 +185,7 @@
     </div>
 </div>
 
+<!-- ── HOW IT WORKS ── -->
 <div class="flow-section fade-up delay-3">
     <div class="section-label" data-en="▸ HOW IT WORKS" data-fr="▸ FONCTIONNEMENT">▸ HOW IT WORKS</div>
     <div class="flow-grid">
@@ -200,58 +200,119 @@
             <div class="step-num">02</div>
             <div class="step-icon">🧠</div>
             <div class="step-title" data-en="Thinks &amp; decides" data-fr="Réfléchit &amp; décide">Thinks &amp; decides</div>
-            <div class="step-desc" data-en="Mistral decides whether to respond and generates an unpredictable reply matching her personality." data-fr="Mistral décide de répondre ou non et génère une réplique imprévisible selon sa personnalité.">Mistral décide de répondre ou non et génère une réplique imprévisible selon sa personnalité.</div>
+            <div class="step-desc" data-en="Mistral decides whether to respond and generates an unpredictable reply matching her personality." data-fr="Mistral décide de répondre ou non et génère une réplique imprévisible selon sa personnalité.">Mistral decides whether to respond and generates an unpredictable reply matching her personality.</div>
         </div>
         <div class="flow-arrow">→</div>
         <div class="flow-step">
             <div class="step-num">03</div>
             <div class="step-icon">🗣️</div>
             <div class="step-title" data-en="Speaks" data-fr="Parle">Speaks</div>
-            <div class="step-desc" data-en="Edge TTS generates a neural voice audio file, played directly in the Discord voice channel." data-fr="Edge TTS génère un fichier audio à voix neuronale, joué directement dans le salon vocal Discord.">Edge TTS génère un fichier audio à voix neuronale, joué directement dans le salon vocal Discord.</div>
+            <div class="step-desc" data-en="Edge TTS generates a neural voice audio file, played directly in the Discord voice channel." data-fr="Edge TTS génère un fichier audio à voix neuronale, joué directement dans le salon vocal Discord.">Edge TTS generates a neural voice audio file, played directly in the Discord voice channel.</div>
         </div>
         <div class="flow-arrow">→</div>
         <div class="flow-step">
             <div class="step-num">04</div>
             <div class="step-icon">🎭</div>
             <div class="step-title" data-en="Animates the avatar" data-fr="Anime l'avatar">Animates the avatar</div>
-            <div class="step-desc" data-en="VTube Studio receives WebSocket signals and triggers lip-sync and emotion expressions in real time." data-fr="VTube Studio reçoit les signaux WebSocket et déclenche la synchronisation labiale et les expressions d'émotion en temps réel.">VTube Studio reçoit les signaux WebSocket et déclenche la synchronisation labiale et les expressions d'émotion en temps réel.</div>
+            <div class="step-desc" data-en="VTube Studio receives WebSocket signals and triggers lip-sync and emotion expressions in real time." data-fr="VTube Studio reçoit les signaux WebSocket et déclenche la synchronisation labiale et les expressions d'émotion en temps réel.">VTube Studio receives WebSocket signals and triggers lip-sync and emotion expressions in real time.</div>
         </div>
     </div>
 </div>
 
+<!-- ── SCREENSHOTS ── -->
 <div class="gallery-section fade-up delay-4">
     <div class="gallery-header">
         <h2 data-en="Screenshots" data-fr="Captures d'écran">Screenshots</h2>
     </div>
     <div class="gallery-grid">
+
         <div class="gallery-item" onclick="openLightbox(this)">
             <img src="tamaya1.png" alt="Tamaya in Discord">
             <div class="gallery-overlay"><span data-en="Tamaya in Discord" data-fr="Tamaya dans Discord">Tamaya in Discord</span></div>
         </div>
+
         <div class="gallery-item" onclick="openLightbox(this)">
             <img src="tamaya2.png" alt="VTube Studio avatar">
             <div class="gallery-overlay"><span data-en="VTube Studio avatar" data-fr="Avatar VTube Studio">VTube Studio avatar</span></div>
         </div>
+
         <div class="gallery-item" onclick="openLightbox(this)">
             <img src="tamaya3.png" alt="Terminal — AI responses">
             <div class="gallery-overlay"><span data-en="Terminal — AI responses" data-fr="Terminal — réponses IA">Terminal — AI responses</span></div>
         </div>
+
         <div class="gallery-item" onclick="openLightbox(this)">
             <img src="tamaya4.png" alt="Config & personality">
             <div class="gallery-overlay"><span data-en="Config &amp; personality" data-fr="Config &amp; personnalité">Config &amp; personality</span></div>
         </div>
+
     </div>
 </div>
 
+<!-- ── LIGHTBOX ── -->
 <div class="lightbox" id="lightbox" onclick="closeLightbox()">
     <button class="lightbox-close" onclick="closeLightbox()">✕ CLOSE</button>
     <img id="lightboxImg" src="" alt="">
 </div>
 
+<!-- ── FOOTER ── -->
 <footer>
     <p data-en="© 2026 Maxime SHU. All rights reserved." data-fr="© 2026 Maxime SHU. Tous droits réservés.">© 2026 Maxime SHU. All rights reserved.</p>
 </footer>
 
-<script src="tamaya.js"></script>
+<script>
+// ─── LIGHTBOX ───
+function openLightbox(el) {
+    const img = el.querySelector('img');
+    if (!img) return;
+    document.getElementById('lightboxImg').src = img.src;
+    document.getElementById('lightbox').classList.add('active');
+}
+
+function closeLightbox() {
+    document.getElementById('lightbox').classList.remove('active');
+}
+
+document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') closeLightbox();
+});
+
+// ─── LANGUAGE TOGGLE ───
+let currentLang = 'en';
+const langToggle = document.getElementById('langToggle');
+
+langToggle.addEventListener('click', () => {
+    currentLang = currentLang === 'en' ? 'fr' : 'en';
+    langToggle.textContent = currentLang === 'en' ? 'FR' : 'EN';
+    document.documentElement.lang = currentLang;
+
+    document.querySelectorAll('[data-en][data-fr]').forEach(el => {
+        el.textContent = el.getAttribute(`data-${currentLang}`);
+    });
+
+    localStorage.setItem('preferredLang', currentLang);
+});
+
+window.addEventListener('DOMContentLoaded', () => {
+    const saved = localStorage.getItem('preferredLang');
+    if (saved && saved !== currentLang) langToggle.click();
+});
+
+// ─── SCROLL REVEAL ───
+(function() {
+    const els = document.querySelectorAll('.fade-up');
+    const io = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+            if (e.isIntersecting) {
+                e.target.classList.add('visible');
+            } else {
+                e.target.classList.remove('visible');
+            }
+        });
+    }, { threshold: 0.1 });
+    els.forEach(el => io.observe(el));
+})();
+</script>
+
 </body>
 </html>

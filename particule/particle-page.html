@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Particle Universe — Maxime SHU</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Orbitron:wght@700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="particle-page.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+
+    <style>
+    .fade-up {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity 0.7s ease, transform 0.7s ease;
+        animation: none !important;
+    }
+    .fade-up.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="header-content">
+        <a href="../index.html" class="back-btn" style="text-decoration:none;cursor:pointer;">
+            ← <span data-en="BACK" data-fr="RETOUR">BACK</span>
+        </a>
+        <a href="../index.html" class="logo" style="text-decoration:none;cursor:pointer;pointer-events:auto;">Maxime <span>SHU</span></a>
+        <button id="langToggle" class="lang-btn">FR</button>
+    </div>
+</header>
+
+<div class="hero fade-up">
+    <div class="project-tag" data-en="CREATIVE CODING PROJECT" data-fr="PROJET CREATIVE CODING">CREATIVE CODING PROJECT</div>
+    <h1 class="hero-title">
+        <span>PARTICLE</span><br>
+        <span style="color:#fff; font-size:0.55em; letter-spacing:4px;" data-en="UNIVERSE" data-fr="UNIVERSE">UNIVERSE</span>
+    </h1>
+    <div class="hero-meta">
+        <span class="meta-pill tech">Three.js · MediaPipe · WebGL</span>
+        <span class="meta-pill year" data-en="2026" data-fr="2026">2026</span>
+        <span class="meta-pill type" data-en="Creative Coding" data-fr="Creative Coding">Creative Coding</span>
+        <span class="meta-pill type" style="border-color:#a78bfa;color:#a78bfa;background:rgba(167,139,250,0.08);" data-en="Hand Tracking AI" data-fr="IA Suivi des mains">Hand Tracking AI</span>
+    </div>
+</div>
+
+<div class="video-section fade-up delay-1">
+    <div class="section-label" data-en="▸ GAMEPLAY DEMO" data-fr="▸ DÉMO">▸ GAMEPLAY DEMO</div>
+    <div class="video-wrapper">
+        <video controls autoplay muted loop>
+            <source src="particle.mp4" type="video/mp4">
+        </video>
+        <div class="video-placeholder">
+            <div class="play-icon">
+                <svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
+            </div>
+            <p data-en="Click to play demo" data-fr="Cliquer pour lancer la démo">Click to play demo</p>
+        </div>
+    </div>
+</div>
+
+<div class="info-section fade-up delay-2">
+
+    <div class="desc-block">
+        <h3 data-en="About this project" data-fr="À propos du projet">About this project</h3>
+        <p data-en="A real-time 3D particle engine controlled entirely by hand gestures. 3 000 particles self-organise into 8 procedural shapes — heart, galaxy, DNA double helix, torus, flower, sphere, nebula and tree — rendered at 60 fps via WebGL with Three.js."
+           data-fr="Un moteur de particules 3D en temps réel piloté entièrement par des gestes de la main. 3 000 particules s'organisent en 8 formes procédurales — cœur, galaxie, double hélice ADN, tore, fleur, sphère, nébuleuse et arbre — rendu à 60 fps via WebGL avec Three.js.">A real-time 3D particle engine controlled entirely by hand gestures. 3 000 particles self-organise into 8 procedural shapes — heart, galaxy, DNA double helix, torus, flower, sphere, nebula and tree — rendered at 60 fps via WebGL with Three.js.</p>
+        <p data-en="MediaPipe Hands detects 21 landmarks per hand at ~25 fps and translates them into intuitive controls. A unique draw mode lets you trace any shape with your index finger — the particles then morph to match your custom drawing in real time."
+           data-fr="MediaPipe Hands détecte 21 points de repère par main à ~25 fps et les traduit en contrôles intuitifs. Un mode dessin unique permet de tracer n'importe quelle forme avec l'index — les particules se morphent ensuite vers votre dessin en temps réel.">MediaPipe Hands detects 21 landmarks per hand at ~25 fps and translates them into intuitive controls. A unique draw mode lets you trace any shape with your index finger — the particles then morph to match your custom drawing in real time.</p>
+        <ul class="feature-list">
+            <li data-en="8 procedural shapes: Heart, Galaxy, Flower, Sphere, DNA, Torus, Nebula, Tree" data-fr="8 formes procédurales : Cœur, Galaxie, Fleur, Sphère, ADN, Tore, Nébuleuse, Arbre">8 procedural shapes: Heart, Galaxy, Flower, Sphere, DNA, Torus, Nebula, Tree</li>
+            <li data-en="Open hand (5 fingers) → real-time 3D rotation with X/Y axis lock" data-fr="Main ouverte (5 doigts) → rotation 3D en temps réel avec verrouillage axe X/Y">Open hand (5 fingers) → real-time 3D rotation with X/Y axis lock</li>
+            <li data-en="3-finger pinch → smooth zoom with momentum &amp; fist-freeze" data-fr="Pincement 3 doigts → zoom fluide avec momentum et gel par poing">3-finger pinch → smooth zoom with momentum &amp; fist-freeze</li>
+            <li data-en="Index finger at edge → cycle shapes left / right" data-fr="Index au bord → changer de forme gauche / droite">Index finger at edge → cycle shapes left / right</li>
+            <li data-en="Pinky gesture → draw mode: trace with index, validate with OK" data-fr="Auriculaire → mode dessin : tracer avec l'index, valider avec OK">Pinky gesture → draw mode: trace with index, validate with OK</li>
+            <li data-en="Adaptive cursor smoothing — fast when moving fast, silky when slow" data-fr="Lissage adaptatif — rapide si rapide, soyeux si lent">Adaptive cursor smoothing — fast when moving fast, silky when slow</li>
+            <li data-en="3 000 particles, additive blending, capped at 1.5× device pixel ratio" data-fr="3 000 particules, mélange additif, plafonné à 1.5× device pixel ratio">3 000 particles, additive blending, capped at 1.5× device pixel ratio</li>
+        </ul>
+    </div>
+
+    <div class="tech-block">
+        <h3 data-en="Tech Stack" data-fr="Technologies">Tech Stack</h3>
+        <div class="tech-grid">
+            <div class="tech-chip"><i class="devicon-javascript-plain colored"></i><span class="chip-label">JavaScript</span></div>
+            <div class="tech-chip chip-custom"><span class="chip-icon-txt">🔮</span><span class="chip-label">Three.js</span></div>
+            <div class="tech-chip chip-custom"><span class="chip-icon-txt">🖐️</span><span class="chip-label">MediaPipe</span></div>
+            <div class="tech-chip chip-custom"><span class="chip-icon-txt">⚡</span><span class="chip-label">WebGL</span></div>
+            <div class="tech-chip chip-custom"><span class="chip-icon-txt">📷</span><span class="chip-label">WebRTC</span></div>
+            <div class="tech-chip chip-custom"><span class="chip-icon-txt">🎨</span><span class="chip-label">Canvas 2D</span></div>
+        </div>
+    </div>
+
+</div>
+
+<div class="gallery-section fade-up delay-3">
+    <div class="gallery-header">
+        <h2 data-en="Screenshots" data-fr="Captures d'écran">Screenshots</h2>
+    </div>
+
+    <div class="gallery-grid">
+
+        <div class="gallery-item" onclick="openLightbox(this)">
+            <img src="particle1.png" alt="Heart shape">
+            <div class="gallery-overlay"><span data-en="Heart Shape" data-fr="Forme Cœur">Heart Shape</span></div>
+        </div>
+
+        <div class="gallery-item" onclick="openLightbox(this)">
+            <img src="particle2.png" alt="Galaxy shape">
+            <div class="gallery-overlay"><span data-en="Galaxy" data-fr="Galaxie">Galaxy</span></div>
+        </div>
+
+        <div class="gallery-item" onclick="openLightbox(this)">
+            <img src="particle3.png" alt="DNA Helix">
+            <div class="gallery-overlay"><span data-en="DNA Helix" data-fr="Hélice ADN">DNA Helix</span></div>
+        </div>
+
+        <div class="gallery-item" onclick="openLightbox(this)">
+            <img src="particle4.png" alt="Draw mode">
+            <div class="gallery-overlay"><span data-en="Draw Mode" data-fr="Mode Dessin">Draw Mode</span></div>
+        </div>
+
+        <div class="gallery-item" onclick="openLightbox(this)">
+            <img src="particle5.png" alt="Torus shape">
+            <div class="gallery-overlay"><span data-en="Torus" data-fr="Tore">Torus</span></div>
+        </div>
+
+        <div class="gallery-item" onclick="openLightbox(this)">
+            <img src="particle6.png" alt="Nebula shape">
+            <div class="gallery-overlay"><span data-en="Nebula" data-fr="Nébuleuse">Nebula</span></div>
+        </div>
+
+    </div>
+</div>
+
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <button class="lightbox-close" onclick="closeLightbox()">✕ CLOSE</button>
+    <img id="lightboxImg" src="" alt="">
+</div>
+
+<footer>
+    <p data-en="© 2026 Maxime SHU. All rights reserved." data-fr="© 2026 Maxime SHU. Tous droits réservés.">© 2026 Maxime SHU. All rights reserved.</p>
+</footer>
+
+<script>
+// ─── LIGHTBOX ───
+function openLightbox(el) {
+    const img = el.querySelector('img');
+    if (!img) return;
+    document.getElementById('lightboxImg').src = img.src;
+    document.getElementById('lightbox').classList.add('active');
+}
+function closeLightbox() {
+    document.getElementById('lightbox').classList.remove('active');
+}
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+
+// ─── LANGUAGE TOGGLE ───
+let currentLang = 'en';
+const langToggle = document.getElementById('langToggle');
+
+langToggle.addEventListener('click', () => {
+    currentLang = currentLang === 'en' ? 'fr' : 'en';
+    langToggle.textContent = currentLang === 'en' ? 'FR' : 'EN';
+    document.documentElement.lang = currentLang;
+    document.querySelectorAll('[data-en][data-fr]').forEach(el => {
+        el.textContent = el.getAttribute(`data-${currentLang}`);
+    });
+    localStorage.setItem('preferredLang', currentLang);
+});
+
+window.addEventListener('DOMContentLoaded', () => {
+    const saved = localStorage.getItem('preferredLang');
+    if (saved && saved !== currentLang) langToggle.click();
+});
+
+// ─── SCROLL REVEAL ───
+(function() {
+    const els = document.querySelectorAll('.fade-up');
+    const io = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+            if (e.isIntersecting) e.target.classList.add('visible');
+            else e.target.classList.remove('visible');
+        });
+    }, { threshold: 0.1 });
+    els.forEach(el => io.observe(el));
+})();
+</script>
+
+</body>
+</html>
