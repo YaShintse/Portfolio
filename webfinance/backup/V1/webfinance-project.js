@@ -1,3 +1,8 @@
+/* =====================================================
+   PROJET R — Project Page · JS
+   ===================================================== */
+
+// ─── LIGHTBOX ───
 function openLightbox(el) {
     const img = el.querySelector('img');
     if (!img) return;
@@ -13,6 +18,7 @@ document.addEventListener('keydown', e => {
     if (e.key === 'Escape') closeLightbox();
 });
 
+// ─── LANGUAGE TOGGLE ───
 let currentLang = 'en';
 const langToggle = document.getElementById('langToggle');
 
@@ -31,6 +37,7 @@ window.addEventListener('DOMContentLoaded', () => {
     if (saved && saved !== currentLang) langToggle.click();
 });
 
+// ─── SCROLL REVEAL ───
 (function () {
     const els = document.querySelectorAll('.fade-up');
     const io = new IntersectionObserver((entries) => {
@@ -42,6 +49,7 @@ window.addEventListener('DOMContentLoaded', () => {
     els.forEach(el => io.observe(el));
 })();
 
+// ─── 3D CUBE — drag to rotate ───
 (function () {
     const scene = document.getElementById('scene3d');
     const cube  = document.getElementById('cube');
@@ -53,6 +61,7 @@ window.addEventListener('DOMContentLoaded', () => {
     let velX = 0, velY = 0;
     let rafId = null;
 
+    // Auto-rotate when idle
     let idleTimer = null;
     let autoRotate = true;
 
@@ -74,6 +83,7 @@ window.addEventListener('DOMContentLoaded', () => {
         idleTimer = setTimeout(() => { autoRotate = true; }, 3000);
     }
 
+    // Momentum decay after drag
     function applyMomentum() {
         if (!isDragging && (Math.abs(velX) > 0.05 || Math.abs(velY) > 0.05)) {
             rotY += velX;
@@ -85,6 +95,7 @@ window.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    // Merge momentum into auto loop
     cancelAnimationFrame(rafId);
     function loop() {
         if (autoRotate) {
@@ -97,6 +108,7 @@ window.addEventListener('DOMContentLoaded', () => {
     }
     loop();
 
+    // Mouse
     scene.addEventListener('mousedown', e => {
         isDragging = true;
         autoRotate = false;
@@ -127,6 +139,7 @@ window.addEventListener('DOMContentLoaded', () => {
         resetIdleTimer();
     });
 
+    // Touch
     scene.addEventListener('touchstart', e => {
         isDragging = true;
         autoRotate = false;
