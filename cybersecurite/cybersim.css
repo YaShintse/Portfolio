@@ -20,23 +20,76 @@ body {
     overflow-x: hidden;
 }
 
-body::before {
-    content: '';
+.cyber-bg {
     position: fixed;
     inset: 0;
-    background-image:
-        linear-gradient(rgba(0,255,77,0.025) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(0,255,77,0.025) 1px, transparent 1px);
-    background-size: 50px 50px;
     z-index: 0;
+    overflow: hidden;
     pointer-events: none;
+    background-color: var(--dark-bg);
+}
+
+.scanlines {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,0) 50%, rgba(0, 255, 77, 0.03) 50%, rgba(0, 255, 77, 0.03));
+    background-size: 100% 4px;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.orb-1 {
+    position: absolute;
+    top: -10%; left: -10%;
+    width: 40vw; height: 40vw;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(0,255,77,0.06) 0%, transparent 70%);
+    animation: floatCyber 20s ease-in-out infinite alternate;
+    z-index: 0;
+}
+
+.orb-2 {
+    position: absolute;
+    bottom: -20%; right: -10%;
+    width: 50vw; height: 50vw;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(139,0,255,0.05) 0%, transparent 70%);
+    animation: floatCyber2 25s ease-in-out infinite alternate;
+    z-index: 0;
+}
+
+.laser-scan {
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: var(--neon-lime);
+    box-shadow: 0 0 15px var(--neon-lime), 0 4px 20px rgba(0,255,77,0.4);
+    opacity: 0.5;
+    animation: scanline 8s linear infinite;
+    z-index: 2;
+}
+
+@keyframes floatCyber {
+    0% { transform: translate(0, 0) scale(1); }
+    100% { transform: translate(10vw, 15vh) scale(1.3); }
+}
+
+@keyframes floatCyber2 {
+    0% { transform: translate(0, 0) scale(1); }
+    100% { transform: translate(-15vw, -10vh) scale(1.2); }
+}
+
+@keyframes scanline {
+    0% { transform: translateY(-10vh); opacity: 0; }
+    10% { opacity: 0.6; }
+    90% { opacity: 0.6; }
+    100% { transform: translateY(110vh); opacity: 0; }
 }
 
 ::-webkit-scrollbar { width: 8px; }
 ::-webkit-scrollbar-track { background: var(--dark-bg); }
 ::-webkit-scrollbar-thumb { background: var(--neon-lime); border-radius: 4px; }
 
-/* ─── HEADER ─── */
 header {
     padding: 1.5rem 5%;
     backdrop-filter: blur(10px);
@@ -120,7 +173,6 @@ header {
 .lang-btn:hover { color: var(--dark-bg); box-shadow: 0 0 20px rgba(255,0,255,0.6); }
 .lang-btn:hover::before { left: 0; }
 
-/* ─── HERO ─── */
 .hero {
     max-width: 1300px;
     margin: 0 auto;
@@ -190,7 +242,6 @@ header {
 .meta-pill.type  { border: 1px solid var(--neon-mint);   color: var(--neon-mint);   background: rgba(0,229,160,0.07); }
 .meta-pill.type2 { border: 1px solid var(--neon-violet);  color: #b57bff;             background: rgba(139,0,255,0.07); }
 
-/* ─── VIDEO ─── */
 .video-section {
     max-width: 1300px;
     margin: 0 auto;
@@ -218,8 +269,6 @@ header {
     box-shadow: 0 0 40px rgba(0,255,77,0.1), inset 0 0 60px rgba(0,0,0,0.5);
     overflow: hidden;
 }
-
-
 
 .video-wrapper video,
 .video-wrapper iframe {
@@ -270,7 +319,6 @@ header {
     text-transform: uppercase;
 }
 
-/* ─── INFO SECTION ─── */
 .info-section {
     max-width: 1300px;
     margin: 0 auto;
@@ -358,9 +406,6 @@ header {
     transform: translateY(-2px);
 }
 
-
-
-/* Stats */
 .stats-block {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -391,7 +436,6 @@ header {
     font-family: 'Orbitron', sans-serif;
 }
 
-/* Links */
 .links-block { margin-top: 1.8rem; }
 
 .links-block h3 {
@@ -422,7 +466,6 @@ header {
 .link-btn.blue:hover    { background: var(--neon-lime);    color: var(--dark-bg); box-shadow: 0 0 20px rgba(0,255,77,0.5); }
 .link-btn.magenta:hover { background: var(--neon-magenta); color: var(--dark-bg); box-shadow: 0 0 20px rgba(255,0,255,0.4); }
 
-/* ─── FLOW SECTION ─── */
 .flow-section {
     max-width: 1300px;
     margin: 0 auto;
@@ -504,7 +547,6 @@ header {
     flex-shrink: 0;
 }
 
-/* ─── GALLERY ─── */
 .gallery-section {
     max-width: 1300px;
     margin: 0 auto;
@@ -612,7 +654,6 @@ header {
     text-transform: uppercase;
 }
 
-/* ─── LIGHTBOX ─── */
 .lightbox {
     display: none;
     position: fixed;
@@ -652,7 +693,6 @@ header {
     color: var(--dark-bg);
 }
 
-/* ─── FOOTER ─── */
 footer {
     text-align: center;
     padding: 2rem;
@@ -663,7 +703,6 @@ footer {
     z-index: 1;
 }
 
-/* ─── ANIMATIONS ─── */
 .fade-up {
     opacity: 0;
     transform: translateY(30px);
@@ -679,7 +718,6 @@ footer {
 .delay-3 { animation-delay: 0.4s; }
 .delay-4 { animation-delay: 0.55s; }
 
-/* ─── RESPONSIVE ─── */
 @media (max-width: 900px) {
     .info-section { grid-template-columns: 1fr; gap: 2.5rem; }
     .flow-grid { flex-direction: column; }
@@ -693,7 +731,6 @@ footer {
     .stats-block { grid-template-columns: 1fr; gap: 1.5rem; }
 }
 
-/* ── DEVICON TECH CHIPS ── */
 .tech-chip i {
     font-size: 1.6rem;
     flex-shrink: 0;

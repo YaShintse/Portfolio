@@ -1,7 +1,6 @@
-// ─── LIGHTBOX ───
 function openLightbox(el) {
     const img = el.querySelector('img');
-    if (!img) return; // placeholder — pas d'action
+    if (!img) return;
     document.getElementById('lightboxImg').src = img.src;
     document.getElementById('lightbox').classList.add('active');
 }
@@ -14,7 +13,6 @@ document.addEventListener('keydown', e => {
     if (e.key === 'Escape') closeLightbox();
 });
 
-// ─── LANGUAGE TOGGLE ───
 let currentLang = 'en';
 const langToggle = document.getElementById('langToggle');
 
@@ -30,7 +28,6 @@ langToggle.addEventListener('click', () => {
     localStorage.setItem('preferredLang', currentLang);
 });
 
-// Charger la langue sauvegardée au démarrage
 window.addEventListener('DOMContentLoaded', () => {
     const saved = localStorage.getItem('preferredLang');
     if (saved && saved !== currentLang) langToggle.click();

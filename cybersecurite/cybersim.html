@@ -7,9 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Orbitron:wght@700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="cybersim.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
-
     <style>
-    /* Override fade-up pour qu'il soit contrôlé par JS */
     .fade-up {
         opacity: 0;
         transform: translateY(30px);
@@ -24,7 +22,13 @@
 </head>
 <body>
 
-<!-- ── HEADER ── -->
+<div class="cyber-bg">
+    <div class="scanlines"></div>
+    <div class="orb-1"></div>
+    <div class="orb-2"></div>
+    <div class="laser-scan"></div>
+</div>
+
 <header>
     <div class="header-content">
         <a href="../index.html" class="back-btn" style="text-decoration:none;cursor:pointer;">
@@ -35,7 +39,6 @@
     </div>
 </header>
 
-<!-- ── HERO ── -->
 <div class="hero fade-up">
     <div class="project-tag" data-en="WEB SECURITY AWARENESS PROJECT" data-fr="PROJET SENSIBILISATION CYBERSÉCURITÉ">WEB SECURITY AWARENESS PROJECT</div>
     <h1 class="hero-title">
@@ -50,13 +53,12 @@
     </div>
 </div>
 
-<!-- ── VIDEO ── -->
 <div class="video-section fade-up delay-1">
     <div class="section-label" data-en="▸ DEMO VIDEO" data-fr="▸ VIDÉO DE DÉMONSTRATION">▸ DEMO VIDEO</div>
     <div class="video-wrapper">
-                <video controls autoplay muted loop>
-                    <source src="cybersim.mp4" type="video/mp4">
-                </video>
+        <video controls autoplay muted loop>
+            <source src="cybersim.mp4" type="video/mp4">
+        </video>
         <div class="video-placeholder" onclick="alert('Remplace ce placeholder par ta vidéo !')">
             <div class="play-icon">
                 <svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
@@ -66,10 +68,8 @@
     </div>
 </div>
 
-<!-- ── DESCRIPTION + TECH ── -->
 <div class="info-section fade-up delay-2">
 
-    <!-- Description -->
     <div class="desc-block">
         <h3 data-en="About this project" data-fr="À propos du projet">About this project</h3>
         <p data-en="CyberSim is a fully local, interactive web simulation designed to raise awareness about online dangers. Users are immersed in a realistic digital environment — a smartphone or desktop — and face real-world cyber threats without any actual risk."
@@ -92,7 +92,6 @@
         </ul>
     </div>
 
-    <!-- Tech stack -->
     <div class="tech-block">
         <h3 data-en="Tech Stack" data-fr="Technologies">Tech Stack</h3>
         <div class="tech-grid">
@@ -104,7 +103,6 @@
             <div class="tech-chip chip-custom"><span class="chip-icon-txt">📹</span><span class="chip-label">WebRTC API</span></div>
         </div>
 
-        <!-- Stats -->
         <div class="stats-block">
             <div class="stat-item">
                 <div class="stat-number">6</div>
@@ -123,7 +121,6 @@
 
 </div>
 
-<!-- ── HOW IT WORKS ── -->
 <div class="flow-section fade-up delay-3">
     <div class="section-label" data-en="▸ HOW IT WORKS" data-fr="▸ FONCTIONNEMENT">▸ HOW IT WORKS</div>
     <div class="flow-grid">
@@ -157,7 +154,6 @@
     </div>
 </div>
 
-<!-- ── SCREENSHOTS ── -->
 <div class="gallery-section fade-up delay-4">
     <div class="gallery-header">
         <h2 data-en="Screenshots" data-fr="Captures d'écran">Screenshots</h2>
@@ -197,13 +193,11 @@
     </div>
 </div>
 
-<!-- ── LIGHTBOX ── -->
 <div class="lightbox" id="lightbox" onclick="closeLightbox()">
     <button class="lightbox-close" onclick="closeLightbox()">✕ CLOSE</button>
     <img id="lightboxImg" src="" alt="">
 </div>
 
-<!-- ── FOOTER ── -->
 <footer>
     <p data-en="© 2026 Maxime SHU. All rights reserved." data-fr="© 2026 Maxime SHU. Tous droits réservés.">© 2026 Maxime SHU. All rights reserved.</p>
 </footer>
@@ -211,7 +205,6 @@
 <script src="cybersim.js"></script>
 
 <script>
-/* ── SCROLL REVEAL — re-joue à chaque passage ── */
 (function() {
     const els = document.querySelectorAll('.fade-up');
     const io = new IntersectionObserver((entries) => {
